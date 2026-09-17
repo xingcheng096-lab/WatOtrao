@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "./styles/animations.css";
+
+@layer base {
+  :root {
+    --font-serif-khmer: 'Noto Serif Khmer', 'Cinzel', serif;
+    --font-sans-khmer: 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif;
+    --font-display: 'Noto Serif Khmer', 'Cinzel', serif;
+
+    /* WAT O TRAO Official Brand Colors */
+    --color-wat-blue: #1B24C9;
+    --color-deep-blue: #11178F;
+    --color-bright-blue: #2934E5;
+    --color-temple-gold: #D4A62A;
+    --color-warm-gold: #C99624;
+    --color-temple-cream: #FFF9EA;
+    --color-soft-cream: #F7EED8;
+    --color-temple-red: #8A2727;
+    --color-dark-text: #30251F;
+  }
+
+  body {
+    font-family: 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif;
+    color: #30251F;
+    background-color: #FFF9EA;
+  }
+
+  h1, h2, h3, .font-khmer-serif {
+    font-family: 'Noto Serif Khmer', 'Cinzel', serif;
+  }
+
+  .font-khmer-sans {
+    font-family: 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif;
+  }
+}
+
+/* =========================================
+   MONK SECTION MOTION
+========================================= */
+
+@keyframes monkFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes monkGoldGlow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateX(-50%) scaleX(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+.monk-card-motion {
+  opacity: 0;
+  animation: monkFadeUp 0.7s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.monk-card-motion:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.monk-card-motion:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.monk-card-motion:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+.monk-card-motion:nth-child(4) {
+  animation-delay: 0.35s;
+}
+
+.monk-card-motion:hover {
+  transform: translateY(-8px);
+}
+
+.monk-gold-line {
+  animation: monkGoldGlow 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .monk-card-motion,
+  .monk-gold-line {
+    animation: none !important;
+    opacity: 1;
+  }
+
+  .monk-card-motion,
+  .monk-card-motion img {
+    transition: none !important;
+  }
+}

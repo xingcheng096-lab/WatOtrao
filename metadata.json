@@ -1,0 +1,6 @@
+{
+  "name": "WAT KHMER Website",
+  "description": "គេហទំព័រផ្លូវការ វត្ត អូរត្រាវ (WAT O TRAO) - វត្តព្រះពុទ្ធសាសនាខ្មែរក្រោម, អាសយដ្ឋាន R6Q9+22J, Tập Ngãi, Vĩnh Long, Vietnam។ ទីសក្ការបូជាពុទ្ធសាសនាថេរវាទ និងមរតកវប្បធម៌ខ្មែរក្រោម។",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
