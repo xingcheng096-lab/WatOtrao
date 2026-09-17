@@ -1,20 +1,20 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+﻿# Wat O Trao Website
 
-# Run and deploy your AI Studio app
+គេហទំព័រផ្លូវការសម្រាប់វត្តអូរត្រាវ
 
-This contains everything you need to run your app locally.
+## Wat O Trao
 
-View your app in AI Studio: https://ai.studio/apps/31273b42-9521-4472-99a2-41b51d0180f5
+Website developed to share information about the temple, Buddhist activities, monks, history, events, news, and Khmer cultural heritage.
 
-## Run Locally
+## Development
 
-**Prerequisites:**  Node.js
+npm install
 
+npm run dev
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Technology
+
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
