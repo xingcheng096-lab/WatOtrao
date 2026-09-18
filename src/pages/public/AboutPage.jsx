@@ -13,8 +13,8 @@ import {
   Quote,
   History,
   Church,
+  Clock3,
 } from "lucide-react";
-
 import {
   LotusDivider,
   KhmerDivider,
@@ -201,59 +201,84 @@ const gallery = [
 ];
 
 const archiveImages = [
-  { src: "/assets/history/archive/s1_image1.png", category: "source1", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 01" },
-  { src: "/assets/history/archive/s1_image10.png", category: "source1", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 02" },
-  { src: "/assets/history/archive/s1_image2.png", category: "source1", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 03" },
-  { src: "/assets/history/archive/s1_image3.png", category: "source1", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 04" },
-  { src: "/assets/history/archive/s1_image4.png", category: "source1", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 05" },
-  { src: "/assets/history/archive/s1_image8.png", category: "source1", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 09" },
-  { src: "/assets/history/archive/s1_image9.png", category: "source1", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 10" },
-  { src: "/assets/history/archive/s2_image1.jpg", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 11" },
-  { src: "/assets/history/archive/s2_image10.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 12" },
-  { src: "/assets/history/archive/s2_image11.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 13" },
-  { src: "/assets/history/archive/s2_image12.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 14" },
-  { src: "/assets/history/archive/s2_image13.jpg", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 15" },
-  { src: "/assets/history/archive/s2_image14.jpeg", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 16" },
-  { src: "/assets/history/archive/s2_image14.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 17" },
-  { src: "/assets/history/archive/s2_image15.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 18" },
-  { src: "/assets/history/archive/s2_image16.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 19" },
-  { src: "/assets/history/archive/s2_image17.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 20" },
-  { src: "/assets/history/archive/s2_image18.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 21" },
-  { src: "/assets/history/archive/s2_image19.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 22" },
-  { src: "/assets/history/archive/s2_image2.jpeg", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 23" },
-  { src: "/assets/history/archive/s2_image2.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 24" },
-  { src: "/assets/history/archive/s2_image20.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 25" },
-  { src: "/assets/history/archive/s2_image21.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 26" },
-  { src: "/assets/history/archive/s2_image22.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 27" },
-  { src: "/assets/history/archive/s2_image23.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 28" },
-  { src: "/assets/history/archive/s2_image230.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 29" },
-  { src: "/assets/history/archive/s2_image24.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 30" },
-  { src: "/assets/history/archive/s2_image25.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 31" },
-  { src: "/assets/history/archive/s2_image26.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 32" },
-  { src: "/assets/history/archive/s2_image27.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 33" },
-  { src: "/assets/history/archive/s2_image28.jpg", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 34" },
-  { src: "/assets/history/archive/s2_image29.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 35" },
-  { src: "/assets/history/archive/s2_image3.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 36" },
-  { src: "/assets/history/archive/s2_image30.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 37" },
-  { src: "/assets/history/archive/s2_image300.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 38" },
-  { src: "/assets/history/archive/s2_image31.jpeg", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 39" },
-  { src: "/assets/history/archive/s2_image32.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 40" },
-  { src: "/assets/history/archive/s2_image33.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 41" },
-  { src: "/assets/history/archive/s2_image34.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 42" },
-  { src: "/assets/history/archive/s2_image35.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 43" },
-  { src: "/assets/history/archive/s2_image36.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 44" },
-  { src: "/assets/history/archive/s2_image37.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 45" },
-  { src: "/assets/history/archive/s2_image38.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 46" },
-  { src: "/assets/history/archive/s2_image39.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 47" },
-  { src: "/assets/history/archive/s2_image4.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 48" },
-  { src: "/assets/history/archive/s2_image40.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 49" },
-  { src: "/assets/history/archive/s2_image41.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 50" },
-  { src: "/assets/history/archive/s2_image42.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 51" },
-  { src: "/assets/history/archive/s2_image5.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 52" },
-  { src: "/assets/history/archive/s2_image6.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 53" },
-  { src: "/assets/history/archive/s2_image7.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 54" },
-  { src: "/assets/history/archive/s2_image8.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 55" },
-  { src: "/assets/history/archive/s2_image9.png", category: "source2", title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 56" },
+  // SOURCE 1
+  {
+    src: "/assets/history/archive/s1_image3.png",
+    category: "source1",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 01",
+  },
+  {
+    src: "/assets/history/archive/s1_image4.png",
+    category: "source1",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 02",
+  },
+  {
+    src: "/assets/history/archive/s1_image5.png",
+    category: "source1",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 03",
+  },
+  {
+    src: "/assets/history/archive/s1_image6.png",
+    category: "source1",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 04",
+  },
+
+  // SOURCE 2
+  {
+    src: "/assets/history/archive/wat-old.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 05",
+  },
+  {
+    src: "/assets/history/archive/s2_image8.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 06",
+  },
+  {
+    src: "/assets/history/archive/s2_image12.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 07",
+  },
+  {
+    src: "/assets/history/archive/s2_image14.jpeg",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 08",
+  },
+  {
+    src: "/assets/history/archive/s2_image16.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 09",
+  },
+  {
+    src: "/assets/history/archive/s2_image17.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 10",
+  },
+  {
+    src: "/assets/history/archive/s2_image18.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 11",
+  },
+  {
+    src: "/assets/history/archive/s2_image20.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 12",
+  },
+  {
+    src: "/assets/history/archive/s2_image26.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 13",
+  },
+  {
+    src: "/assets/history/archive/s2_image28.jpg",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 14",
+  },
+  {
+    src: "/assets/history/archive/s2_image36.png",
+    category: "source2",
+    title: "រូបក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ 15",
+  },
 ];
 
 /* =========================================================
@@ -394,203 +419,243 @@ export function AboutPage() {
           INTRODUCTION
       ===================================================== */}
 
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
-        <SectionTitle
-          title="ORIGIN OF O TRAO"
-          khmerTitle="ប្រវត្តិនៃការកកើតភូមិអូរត្រាវ"
-          subtitle="ដើមកំណើតនៃសហគមន៍ និងជីវភាពរបស់បុព្វបុរស"
-        />
+      {/* =====================================================
+    ORIGIN OF O TRAO — PROFESSIONAL 2 IMAGE LAYOUT
+===================================================== */}
 
-        <div className="mt-12 grid lg:grid-cols-[1fr_1.05fr] gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 text-[#1B24C9] text-sm font-bold">
-              <MapPin className="w-5 h-5" />
-              ភូមិអូរត្រាវ
-            </div>
+<section className="relative overflow-hidden bg-[#FFFDF8] py-20 lg:py-24">
+  <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-[#11178F] font-khmer-serif leading-relaxed">
-              សហគមន៍ដែលបានចាប់ផ្ដើមពីការតាំងទីលំនៅ
-              របស់បុព្វបុរស
-            </h2>
+    <SectionTitle
+      title="ORIGIN OF O TRAO"
+      khmerTitle="ប្រវត្តិនៃការកកើតភូមិអូរត្រាវ"
+      subtitle="ដើមកំណើតនៃសហគមន៍ និងជីវភាពរបស់បុព្វបុរស"
+    />
 
-            <div className="mt-6 space-y-5 text-stone-700 leading-8 text-sm sm:text-base">
-              <p>
-                ភូមិអូរត្រាវ ស្ថិតនៅឃុំហ៊ីវតឺ ស្រុកកញ្ចោង
-                ខេត្តត្រាវិញ។ តាមឯកសារប្រវត្តិ
-                ភូមិអូរត្រាវបានកកើតឡើងនៅឆ្នាំមមែ បញ្ចស័ក
-                ព.ស. ២៤២៧ ត្រូវនឹង គ.ស. ១៨៨៣។
-              </p>
-
-              <p>
-                ការកកើតភូមិនេះមានទំនាក់ទំនងយ៉ាងជិតស្និទ្ធ
-                ជាមួយការមកតាំងទីលំនៅរបស់គ្រួសារបុព្វបុរស
-                ដែលបានមករស់នៅលើតំបន់ដីទំនាបក្បែរមាត់អូរ។
-              </p>
-
-              <p>
-                នៅជុំវិញមាត់អូរមានដើមត្រាវដុះជាច្រើន
-                ហើយឈ្មោះ «អូរត្រាវ»
-                ក៏ត្រូវបានប្រើជាឈ្មោះភូមិតាំងពីពេលនោះមក។
-              </p>
-
-              <p>
-                ប្រជាជនបានពឹងផ្អែកជាចម្បងលើរបរកសិកម្ម
-                និងធនធានធម្មជាតិ។ តាមកំណត់ត្រាឆ្នាំ ២០២២
-                ភូមិមានប្រមាណជាង ៤០០ គ្រួសារ។
-              </p>
-            </div>
-
-            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-[#11178F]/5 to-[#D4A62A]/10 border-l-4 border-[#D4A62A]">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#11178F] flex items-center justify-center shrink-0">
-                  <Home className="w-6 h-6 text-[#F0C75E]" />
-                </div>
-
-                <div>
-                  <p className="text-xs text-stone-500 font-bold">
-                    ឆ្នាំកំណើតភូមិ
-                  </p>
-
-                  <h3 className="mt-1 text-xl font-black text-[#11178F]">
-                    ព.ស. ២៤២៧ • គ.ស. ១៨៨៣
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="order-1 lg:order-2 relative">
-            <div className="absolute -inset-3 sm:-inset-5 rounded-[2rem] border border-[#D4A62A]/30" />
-
-            <div className="relative overflow-hidden rounded-[2rem] bg-[#F7F1E2] border border-[#D4A62A]/50 shadow-2xl">
-              <HistoryImage
-                src={historyImages.family}
-                alt="រូបគ្រួសារប្រវត្តិសាស្ត្រភូមិអូរត្រាវ"
-                className="w-full min-h-[350px] max-h-[560px] object-contain"
-              />
-
-              <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/80 to-transparent text-white">
-                <p className="text-xs text-[#F0C75E] font-bold">
-                  HISTORICAL ARCHIVE
-                </p>
-
-                <p className="mt-1 font-bold font-khmer-serif">
-                  រូបភាពគ្រួសារប្រវត្តិសាស្ត្រអូរត្រាវ
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="mt-12 grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
 
       {/* =====================================================
-          FAMILY HISTORY
+          LEFT — CONTENT
       ===================================================== */}
+      <div className="order-2 lg:order-1">
 
-      <section className="relative py-20 lg:py-24 bg-[#F7F1E2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title="FAMILY HISTORY"
-            khmerTitle="លោកតាថាច់ ទឹត និងលោកយាយថាច់ ធី ម៉ង់"
-            subtitle="ជីវប្រវត្តិគ្រួសារដែលមានទំនាក់ទំនងនឹងការកកើតភូមិអូរត្រាវ"
-          />
+        {/* Location */}
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#11178F]/10 bg-[#11178F]/5 px-4 py-2 text-sm font-bold text-[#1B24C9]">
+          <MapPin className="h-4 w-4" />
+          ភូមិអូរត្រាវ
+        </div>
 
-          <div className="mt-12 grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-[2rem] border border-[#D4A62A]/30" />
+        {/* Title */}
+        <h2 className="mt-5 font-khmer-serif text-2xl font-bold leading-[1.7] text-[#11178F] sm:text-3xl lg:text-[34px]">
+          សហគមន៍ដែលបានចាប់ផ្ដើម
+          <span className="block text-[#D4A62A]">
+            ពីការតាំងទីលំនៅរបស់បុព្វបុរស
+          </span>
+        </h2>
 
-              <div className="relative bg-white rounded-[2rem] overflow-hidden shadow-xl border border-[#E8D7A5]">
-                <HistoryImage
-                  src={historyImages.family}
-                  alt="រូបគ្រួសារប្រវត្តិសាស្ត្រអូរត្រាវ"
-                  className="w-full min-h-[420px] max-h-[600px] object-contain bg-[#EEE8DA]"
-                />
+        {/* Divider */}
+        <div className="mt-5 flex items-center gap-2">
+          <div className="h-[2px] w-12 bg-[#D4A62A]" />
+          <div className="h-1.5 w-1.5 rounded-full bg-[#D4A62A]" />
+        </div>
 
-                <div className="p-5 text-center border-t border-[#E8D7A5]">
-                  <p className="text-xs text-[#D4A62A] font-bold tracking-wider">
-                    FAMILY ARCHIVE
-                  </p>
+        {/* History */}
+        <div className="mt-6 space-y-5 text-sm leading-8 text-stone-700 sm:text-base">
 
-                  <p className="mt-1 font-bold text-[#11178F] font-khmer-serif">
-                    រូបភាពគ្រួសារក្នុងឯកសារប្រវត្តិសាស្ត្រ
-                  </p>
-                </div>
-              </div>
+          <p>
+            ភូមិអូរត្រាវ ស្ថិតនៅឃុំហ៊ីវតឺ ស្រុកកញ្ចោង
+            ខេត្តត្រាវិញ។ តាមឯកសារប្រវត្តិ
+            ភូមិអូរត្រាវបានកកើតឡើងនៅឆ្នាំមមែ បញ្ចស័ក
+            ព.ស. ២៤២៧ ត្រូវនឹង គ.ស. ១៨៨៣។
+          </p>
+
+          <p>
+            ការកកើតភូមិនេះមានទំនាក់ទំនងយ៉ាងជិតស្និទ្ធ
+            ជាមួយការមកតាំងទីលំនៅរបស់គ្រួសារបុព្វបុរស
+            ដែលបានមករស់នៅលើតំបន់ដីទំនាបក្បែរមាត់អូរ។
+          </p>
+
+          <p>
+            នៅជុំវិញមាត់អូរមានដើមត្រាវដុះជាច្រើន
+            ហើយឈ្មោះ «អូរត្រាវ»
+            ក៏ត្រូវបានប្រើជាឈ្មោះភូមិតាំងពីពេលនោះមក។
+          </p>
+
+          <p>
+            ប្រជាជនបានពឹងផ្អែកជាចម្បងលើរបរកសិកម្ម
+            និងធនធានធម្មជាតិ។ តាមកំណត់ត្រាឆ្នាំ ២០២២
+            ភូមិមានប្រមាណជាង ៤០០ គ្រួសារ។
+          </p>
+
+        </div>
+
+        {/* Year Card */}
+        <div className="mt-8 overflow-hidden rounded-2xl border border-[#D4A62A]/30 bg-gradient-to-r from-[#11178F]/[0.06] to-[#D4A62A]/10">
+
+          <div className="flex items-center gap-4 p-5 sm:p-6">
+
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#11178F] shadow-lg">
+              <Home className="h-6 w-6 text-[#F0C75E]" />
             </div>
 
-            <div className="space-y-5">
-              <article className="group bg-white p-7 rounded-3xl border border-[#E8D7A5] shadow-sm hover:shadow-xl transition-all">
-                <div className="flex items-center gap-3">
-                  <span className="w-11 h-11 rounded-full bg-[#11178F] text-[#F0C75E] flex items-center justify-center font-black">
-                    ១
-                  </span>
+            <div>
+              <p className="text-xs font-bold text-stone-500">
+                ឆ្នាំកំណើតភូមិ
+              </p>
 
-                  <div>
-                    <p className="text-xs font-bold text-[#D4A62A]">
-                      ព.ស. ២៤០២ • គ.ស. ១៨៥៨
-                    </p>
-
-                    <h3 className="mt-1 text-2xl font-bold text-[#11178F] font-khmer-serif">
-                      លោកតាថាច់ ទឹត
-                    </h3>
-                  </div>
-                </div>
-
-                <p className="mt-5 text-sm sm:text-base leading-8 text-stone-700">
-                  លោកតាថាច់ ទឹត កើតនៅភូមិកញ្ចោងផ្សារ
-                  ស្រុកកញ្ចោង ខេត្តព្រះត្រពាំង។
-                  លោកជាបុត្រទី៦របស់លោកតាថាច់ ចាន់
-                  និងលោកយាយនាម ជ័យ
-                  និងបានប្រកបរបរកសិកម្មតាំងពីយុវវ័យ។
-                </p>
-              </article>
-
-              <article className="group bg-white p-7 rounded-3xl border border-[#E8D7A5] shadow-sm hover:shadow-xl transition-all">
-                <div className="flex items-center gap-3">
-                  <span className="w-11 h-11 rounded-full bg-[#D4A62A] text-[#11178F] flex items-center justify-center font-black">
-                    ២
-                  </span>
-
-                  <div>
-                    <p className="text-xs font-bold text-[#D4A62A]">
-                      ព.ស. ២៤០៨ • គ.ស. ១៨៦៤
-                    </p>
-
-                    <h3 className="mt-1 text-2xl font-bold text-[#11178F] font-khmer-serif">
-                      លោកយាយថាច់ ធី ម៉ង់
-                    </h3>
-                  </div>
-                </div>
-
-                <p className="mt-5 text-sm sm:text-base leading-8 text-stone-700">
-                  លោកយាយថាច់ ធី ម៉ង់ បានរួមរស់
-                  និងប្រកបជីវភាពកសិកម្មជាមួយលោកតាថាច់ ទឹត
-                  ព្រមទាំងចូលរួមកសាងគ្រួសារ
-                  និងសហគមន៍អូរត្រាវ។
-                </p>
-              </article>
-
-              <div className="p-6 rounded-3xl bg-[#11178F] text-white shadow-xl">
-                <div className="flex gap-4">
-                  <Heart className="w-7 h-7 text-[#F0C75E] shrink-0" />
-
-                  <div>
-                    <h3 className="font-bold text-[#F0C75E] font-khmer-serif">
-                      គ្រួសារ និងសហគមន៍
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-7 text-white/80">
-                      គ្រួសារនេះមានទំនាក់ទំនងយ៉ាងសំខាន់
-                      ជាមួយប្រវត្តិនៃការតាំងទីលំនៅ
-                      ការកសាងសហគមន៍ និងការឧបត្ថម្ភព្រះពុទ្ធសាសនា។
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <h3 className="mt-1 font-khmer-serif text-xl font-black text-[#11178F] sm:text-2xl">
+                ព.ស. ២៤២៧
+                <span className="mx-2 text-[#D4A62A]">•</span>
+                គ.ស. ១៨៨៣
+              </h3>
             </div>
+
           </div>
         </div>
-      </section>
+
+      </div>
+
+      {/* =====================================================
+          RIGHT — 2 IMAGE EDITORIAL LAYOUT
+      ===================================================== */}
+      <div className="order-1 lg:order-2">
+
+        <div className="relative pb-12 sm:pb-16">
+
+          {/* Decorative frame */}
+          <div className="pointer-events-none absolute -inset-x-3 -top-3 bottom-9 rounded-[2.2rem] border border-[#D4A62A]/25 sm:-inset-x-5 sm:-top-5" />
+
+          {/* =================================================
+              MAIN IMAGE
+          ================================================= */}
+          <div className="group relative mr-0 overflow-hidden rounded-[2rem] border border-[#D4A62A]/40 bg-[#F7F1E2] shadow-2xl sm:mr-16">
+
+            <HistoryImage
+              src="/assets/history/archive/family.png"
+              alt="រូបគ្រួសារប្រវត្តិសាស្ត្រភូមិអូរត្រាវ"
+              className="
+                block
+                h-[390px]
+                w-full
+                object-cover
+                object-center
+                transition-transform
+                duration-700
+                group-hover:scale-[1.02]
+                sm:h-[500px]
+                lg:h-[540px]
+              "
+            />
+
+            {/* Gradient */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-[#050947]/95 via-[#050947]/50 to-transparent" />
+
+            {/* Archive badge */}
+            <div className="absolute left-5 top-5">
+
+              
+            </div>
+
+            {/* Main caption */}
+            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+
+              <div className="mb-3 h-[2px] w-9 bg-[#F0C75E]" />
+
+              <p className="font-khmer-serif text-lg font-bold leading-8 text-white">
+                រូបភាពគ្រួសារប្រវត្តិសាស្ត្រ
+                <span className="block text-[#F0C75E]">
+                  ភូមិអូរត្រាវ
+                </span>
+              </p>
+
+            </div>
+
+          </div>
+
+          {/* =================================================
+              SECOND IMAGE
+          ================================================= */}
+          <div
+            className="
+              group
+              relative
+              z-10
+              mx-auto
+              -mt-10
+              w-[82%]
+              overflow-hidden
+              rounded-[1.6rem]
+              border-[5px]
+              border-[#FFFDF8]
+              bg-white
+              shadow-2xl
+              sm:absolute
+              sm:-bottom-3
+              sm:right-0
+              sm:mt-0
+              sm:w-[48%]
+            "
+          >
+
+            <div className="relative overflow-hidden rounded-[1.25rem]">
+
+              <HistoryImage
+                src="/assets/history/archive/O Trao Village.png"
+                alt="រូបភាពប្រវត្តិសាស្ត្រភូមិអូរត្រាវ"
+                className="
+                  block
+                  h-[210px]
+                  w-full
+                  object-cover
+                  object-center
+                  transition-transform
+                  duration-700
+                  group-hover:scale-105
+                  sm:h-[230px]
+                "
+              />
+
+              {/* Gradient */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050947]/90 via-transparent to-transparent" />
+
+              {/* Caption */}
+              <div className="absolute inset-x-0 bottom-0 p-4">
+
+                <p className="text-[9px] font-black tracking-[0.15em] text-[#F0C75E]">
+                  O TRAO HISTORY
+                </p>
+
+                <p className="mt-1 font-khmer-serif text-sm font-bold leading-6 text-white">
+                  ទិដ្ឋភាពប្រវត្តិសាស្ត្រ
+                  ភូមិអូរត្រាវ
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* Small archive note */}
+        <div className="mt-1 flex items-start gap-3 px-1 sm:mt-4">
+
+          <ImageIcon className="mt-1 h-4 w-4 shrink-0 text-[#D4A62A]" />
+
+          <p className="text-[11px] leading-6 text-stone-500">
+            រូបភាពជាផ្នែកមួយនៃបណ្ណសារប្រវត្តិសាស្ត្រ
+            ដែលរក្សាទុកសម្រាប់ការសិក្សាអំពីភូមិអូរត្រាវ។
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      
 
 
       {/* =====================================================
@@ -784,100 +849,468 @@ export function AboutPage() {
       </section>
 
       {/* =====================================================
-          TEMPLE HISTORY
+    TEMPLE HISTORY — PROFESSIONAL VERSION
+===================================================== */}
+
+<section className="relative overflow-hidden bg-[#080D67] py-16 lg:py-20 text-white">
+
+  {/* Soft background decoration */}
+  <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-[#1B24C9]/25 blur-3xl" />
+  <div className="pointer-events-none absolute -bottom-52 -left-40 h-[480px] w-[480px] rounded-full bg-[#D4A62A]/10 blur-3xl" />
+
+  <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    {/* =====================================================
+        SECTION HEADER
+    ===================================================== */}
+    <div className="mx-auto max-w-3xl text-center">
+
+      <div className="inline-flex items-center gap-2 rounded-full border border-[#D4A62A]/30 bg-[#D4A62A]/10 px-4 py-2">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#F0C75E]" />
+
+        <span className="text-[10px] font-black tracking-[0.2em] text-[#F0C75E]">
+          WAT O TRAO
+        </span>
+
+        <span className="h-1.5 w-1.5 rounded-full bg-[#F0C75E]" />
+      </div>
+
+      <h2 className="mt-5 font-khmer-serif text-3xl font-bold leading-[1.6] text-white sm:text-4xl lg:text-[42px]">
+        ប្រវត្តិវត្តសាសនសាមគ្គីរង្សី
+        <span className="block text-[#F0C75E]">
+          (អូរត្រាវ)
+        </span>
+      </h2>
+
+      <div className="mx-auto mt-5 flex max-w-[180px] items-center gap-3">
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#D4A62A]" />
+
+        <Church className="h-4 w-4 text-[#F0C75E]" />
+
+        <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#D4A62A]" />
+      </div>
+
+      <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
+        មជ្ឈមណ្ឌលព្រះពុទ្ធសាសនា និងកេរដំណែលប្រវត្តិសាស្ត្រ
+        របស់សហគមន៍អូរត្រាវ
+      </p>
+    </div>
+
+    {/* =====================================================
+        MAIN CONTENT
+    ===================================================== */}
+    <div className="mt-12 grid items-start gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
+
+      {/* =====================================================
+    LEFT — HISTORICAL IMAGES
+===================================================== */}
+<div>
+
+  {/* ================= OLD IMAGE ================= */}
+  <div className="group relative">
+
+    {/* Outer decorative border */}
+    <div className="absolute -inset-2 rounded-[2rem] border border-[#D4A62A]/20" />
+
+    <div className="relative overflow-hidden rounded-[1.75rem] border border-[#D4A62A]/40 bg-[#11178F] p-2 shadow-2xl">
+
+      <div className="relative overflow-hidden rounded-[1.35rem] bg-[#F7F1E2]">
+
+        <HistoryImage
+          src="/assets/history/archive/wat-old.png"
+          alt="សំណង់ប្រវត្តិសាស្ត្រវត្តអូរត្រាវ"
+          className="
+            block
+            h-[340px]
+            w-full
+            object-cover
+            object-center
+            transition-transform
+            duration-700
+            group-hover:scale-[1.02]
+            sm:h-[420px]
+            lg:h-[460px]
+          "
+        />
+
+        {/* Gradient */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-[#050947] via-[#050947]/65 to-transparent" />
+
+        {/* Badge */}
+        <div className="absolute left-5 top-5">
+          <div className="rounded-full border border-white/20 bg-[#050947]/70 px-3 py-1.5 backdrop-blur-md">
+            <span className="text-[9px] font-black tracking-[0.18em] text-[#F0C75E]">
+              HISTORICAL ARCHIVE
+            </span>
+          </div>
+        </div>
+
+        {/* Caption */}
+        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+
+          <div className="mb-3 h-[2px] w-9 bg-[#F0C75E]" />
+
+          <h3 className="font-khmer-serif text-lg font-bold leading-8 text-white sm:text-xl">
+            សំណង់ប្រវត្តិសាស្ត្រ
+            <span className="block">
+              វត្តសាសនសាមគ្គីរង្សី (អូរត្រាវ)
+            </span>
+          </h3>
+
+          <p className="mt-2 text-xs leading-6 text-white/60">
+            រូបភាពចាស់ក្នុងបណ្ណសារប្រវត្តិសាស្ត្រ
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {/* ================= SECOND IMAGE ================= */}
+  <div className="group relative mt-6">
+
+    <div className="absolute -inset-2 rounded-[2rem] border border-[#D4A62A]/15" />
+
+    <div className="relative overflow-hidden rounded-[1.75rem] border border-[#D4A62A]/35 bg-[#11178F] p-2 shadow-xl">
+
+      <div className="relative overflow-hidden rounded-[1.35rem] bg-[#F7F1E2]">
+
+        <HistoryImage
+          src="public/assets/history/archive/ធម្មមន្ទី.png"
+          alt="វត្តសាសនសាមគ្គីរង្សី អូរត្រាវ"
+          className="
+            block
+            h-[300px]
+            w-full
+            object-cover
+            object-center
+            transition-transform
+            duration-700
+            group-hover:scale-[1.02]
+            sm:h-[360px]
+            lg:h-[390px]
+          "
+        />
+
+        {/* Gradient */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-[#050947]/95 via-[#050947]/55 to-transparent" />
+
+        {/* Badge */}
+        <div className="absolute left-5 top-5">
+          <div className="rounded-full border border-[#D4A62A]/30 bg-[#050947]/70 px-3 py-1.5 backdrop-blur-md">
+            <span className="text-[9px] font-black tracking-[0.18em] text-[#F0C75E]">
+              WAT O TRAO
+            </span>
+          </div>
+        </div>
+
+        {/* Caption */}
+        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+
+          <div className="mb-3 h-[2px] w-9 bg-[#F0C75E]" />
+
+          <h3 className="font-khmer-serif text-lg font-bold leading-8 text-white sm:text-xl">
+            វត្តសាសនសាមគ្គីរង្សី
+            <span className="block text-[#F0C75E]">
+              (អូរត្រាវ)
+            </span>
+          </h3>
+
+          <p className="mt-2 text-xs leading-6 text-white/60">
+            រូបភាពធម្មមន្ទីរ
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {/* ================= QUICK FACTS ================= */}
+  <div className="mt-5 grid grid-cols-3 gap-3">
+
+    {[
+      {
+        value: "១៩៨០",
+        label: "ចាប់ផ្ដើមរៀបចំ",
+      },
+      {
+        value: "១០ ម.",
+        label: "ទំហំប្រមាណ",
+      },
+      {
+        value: "១៣ ម.",
+        label: "កម្ពស់ប្រមាណ",
+      },
+    ].map((item) => (
+      <div
+        key={item.value}
+        className="
+          rounded-2xl
+          border border-white/10
+          bg-white/[0.06]
+          px-2
+          py-4
+          text-center
+          backdrop-blur-sm
+          transition
+          duration-300
+          hover:border-[#D4A62A]/40
+          hover:bg-white/[0.09]
+        "
+      >
+        <p className="text-lg font-black text-[#F0C75E] sm:text-xl">
+          {item.value}
+        </p>
+
+        <p className="mt-1 text-[10px] leading-5 text-white/45 sm:text-xs">
+          {item.label}
+        </p>
+      </div>
+    ))}
+
+  </div>
+
+
+  {/* ================= SOURCE NOTE ================= */}
+  <div className="mt-4 flex items-start gap-3 rounded-2xl border border-white/[0.08] bg-[#050947]/30 p-4">
+
+    <ImageIcon className="mt-0.5 h-4 w-4 shrink-0 text-[#D4A62A]" />
+
+    <p className="text-[11px] leading-6 text-white/45">
+      រូបភាពទាំងនេះត្រូវបានរក្សាទុកជាផ្នែកមួយ
+      នៃបណ្ណសារប្រវត្តិសាស្ត្រសហគមន៍អូរត្រាវ។
+    </p>
+
+  </div>
+
+      </div>
+
+      {/* =====================================================
+          RIGHT — HISTORY CONTENT
       ===================================================== */}
+      <div className="lg:pt-1">
 
-      <section className="relative py-20 lg:py-24 overflow-hidden bg-[#080D67] text-white">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#1B24C9]/30 blur-3xl" />
+        {/* Label */}
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#D4A62A]/30 bg-[#D4A62A]/10 px-4 py-2 text-xs font-bold text-[#F0C75E]">
 
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#D4A62A]/10 blur-3xl" />
+          <Church className="h-4 w-4" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            theme="dark"
-            title="WAT O TRAO"
-            khmerTitle="ប្រវត្តិវត្តសាសនសាមគ្គីរង្សី (អូរត្រាវ)"
-            subtitle="មជ្ឈមណ្ឌលព្រះពុទ្ធសាសនារបស់សហគមន៍អូរត្រាវ"
-          />
+          ប្រវត្តិទីអារាម
 
-          <div className="mt-12 grid lg:grid-cols-[1.1fr_.9fr] gap-12 items-center">
-            <div>
-              <div className="p-3 rounded-[2rem] border border-[#D4A62A]/40 bg-white/5 backdrop-blur">
-                <HistoryImage
-                  src={historyImages.oldHall}
-                  alt="សំណង់ប្រវត្តិសាស្ត្រអូរត្រាវ"
-                  className="w-full min-h-[350px] max-h-[500px] object-contain rounded-[1.5rem] bg-white/10"
-                />
-              </div>
+        </div>
 
-              <div className="mt-4 grid grid-cols-2 gap-4">
-                {/* <HistoryImage
-                  src={historyImages.oldBuilding}
-                  alt="សំណង់ចាស់ក្នុងបណ្ណសារ"
-                  className="w-full h-48 object-contain rounded-2xl bg-white/10 border border-white/10"
-                /> */}
+        {/* Main title */}
+        <h3 className="mt-5 font-khmer-serif text-2xl font-bold leading-[1.65] text-white sm:text-3xl lg:text-[34px]">
 
-                {/* <HistoryImage
-                  src={historyImages.templeComplex}
-                  alt="ទីអារាម និងសំណង់"
-                  className="w-full h-48 object-contain rounded-2xl bg-white/10 border border-white/10"
-                /> */}
-              </div>
+          ពីសាលាឧបោសថ
+
+          <span className="block text-[#F0C75E]">
+            ទៅជាព្រះវិហារវត្តអូរត្រាវ
+          </span>
+
+        </h3>
+
+        {/* Intro */}
+        <div className="mt-6 space-y-4 text-sm leading-8 text-[#F7EED8]/80 sm:text-[15px]">
+
+          <p>
+            វត្តសាសនសាមគ្គីរង្សី (អូរត្រាវ)
+            ជាទីអារាមដែលមានទំនាក់ទំនងជិតស្និទ្ធ
+            ជាមួយជីវភាពព្រះពុទ្ធសាសនា
+            និងសហគមន៍របស់ប្រជាជនភូមិអូរត្រាវ។
+          </p>
+
+          <p>
+            ក្នុង ព.ស. ២៥២៤ ត្រូវនឹង គ.ស. ១៩៨០
+            លោកតាពៅ និងលោកតាម៉ិច
+            បានពិភាក្សាអំពីការកសាងវត្ត
+            និងរៀបចំសុំធ្វើសាលាឧបោសថ។
+          </p>
+
+        </div>
+
+        {/* =====================================================
+            CONSTRUCTION CARD
+        ===================================================== */}
+        <div className="mt-7 overflow-hidden rounded-[1.5rem] border border-[#D4A62A]/25 bg-white/[0.06]">
+
+          {/* Card header */}
+          <div className="flex items-center gap-4 border-b border-white/10 px-5 py-4 sm:px-6">
+
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D4A62A]">
+              <Landmark className="h-5 w-5 text-[#080D67]" />
             </div>
 
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4A62A]/15 border border-[#D4A62A]/40 text-[#F0C75E] text-xs font-bold">
-                <Church className="w-4 h-4" />
-                ប្រវត្តិទីអារាម
-              </div>
+              <p className="text-[9px] font-black tracking-[0.18em] text-[#F0C75E]">
+                ARCHITECTURE
+              </p>
 
-              <h2 className="mt-5 text-3xl sm:text-4xl font-bold font-khmer-serif leading-relaxed">
-                ពីសាលាឧបោសថ
-                <span className="block text-[#F0C75E]">
-                  ទៅជាព្រះវិហារវត្តអូរត្រាវ
-                </span>
-              </h2>
+              <h4 className="mt-1 font-khmer-serif font-bold text-white">
+                ការកសាង និងរចនាសម្ព័ន្ធ
+              </h4>
+            </div>
 
-              <div className="mt-7 space-y-5 leading-8 text-[#F7EED8]">
-                <p>
-                  ក្នុង ព.ស. ២៥២៤ គ.ស. ១៩៨០
-                  មានការពិភាក្សាអំពីការកសាងវត្ត
-                  និងការរៀបចំសាលាឧបោសថ។
+          </div>
+
+          <div className="p-5 sm:p-6">
+
+            <p className="text-sm leading-8 text-white/65">
+              សាលាឧបោសថត្រូវបានសាងសង់ពីឥដ្ឋ
+              និងប្រក់ក្បឿង។ តាមឯកសារប្រវត្តិ
+              សំណង់មានបណ្តោយ និងទទឹងប្រមាណ ១០ ម៉ែត្រ
+              និងមានកម្ពស់ប្រមាណ ១៣ ម៉ែត្រ។
+            </p>
+
+            {/* Dimensions */}
+            <div className="mt-5 grid grid-cols-2 gap-3">
+
+              <div className="rounded-xl border border-white/[0.08] bg-[#050947]/40 p-4">
+
+                <p className="text-[10px] font-bold text-white/35">
+                  បណ្តោយ និងទទឹង
                 </p>
 
-                <p>
-                  សាលាឧបោសថត្រូវបានសង់ពីឥដ្ឋ ប្រក់ក្បឿង
-                  មានបណ្តោយ និងទទឹងប្រមាណ ១០ ម៉ែត្រ
-                  និងកម្ពស់ប្រមាណ ១៣ ម៉ែត្រ។
+                <p className="mt-2 font-khmer-serif text-lg font-black text-[#F0C75E]">
+                  ប្រមាណ ១០ ម៉ែត្រ
                 </p>
+
               </div>
 
-              {/* <div className="mt-8 p-7 rounded-3xl bg-white/10 backdrop-blur border border-[#D4A62A]/40">
-                <div className="flex gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-[#D4A62A] flex items-center justify-center shrink-0">
-                    <Calendar className="w-7 h-7 text-[#11178F]" />
-                  </div>
+              <div className="rounded-xl border border-white/[0.08] bg-[#050947]/40 p-4">
 
-                  <div>
-                    <p className="text-xs text-white/60 font-bold">
-                      ព្រឹត្តិការណ៍សំខាន់
-                    </p>
+                <p className="text-[10px] font-bold text-white/35">
+                  កម្ពស់
+                </p>
 
-                    <h3 className="mt-1 text-xl sm:text-2xl font-black text-[#F0C75E] font-khmer-serif">
-                      ២៣ កក្កដា ១៩៩៣
-                    </h3>
+                <p className="mt-2 font-khmer-serif text-lg font-black text-[#F0C75E]">
+                  ប្រមាណ ១៣ ម៉ែត្រ
+                </p>
 
-                    <p className="mt-2 text-sm leading-7 text-white/80">
-                      សាលានេះបានក្លាយជាព្រះវិហារ
-                      នៃវត្តសាសនសាមគ្គីរង្សី (អូរត្រាវ)។
-                    </p>
-                  </div>
-                </div>
-              </div> */}
+              </div>
+
             </div>
           </div>
         </div>
-      </section>
+
+        {/* =====================================================
+            SHORT TEMPLE TIMELINE
+        ===================================================== */}
+        <div className="mt-7">
+
+          <div className="mb-5 flex items-center gap-3">
+
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#D4A62A]">
+              <Clock3 className="h-[18px] w-[18px] text-[#080D67]" />
+            </div>
+
+            <div>
+              <p className="text-[9px] font-black tracking-[0.18em] text-[#F0C75E]">
+                TEMPLE HISTORY
+              </p>
+
+              <h4 className="mt-0.5 font-khmer-serif text-base font-bold text-white">
+                ព្រឹត្តិការណ៍សំខាន់ៗ
+              </h4>
+            </div>
+
+          </div>
+
+          <div className="relative pl-7">
+
+            {/* Line */}
+            <div className="absolute bottom-5 left-[6px] top-5 w-px bg-gradient-to-b from-[#F0C75E] via-[#D4A62A]/60 to-[#D4A62A]/20" />
+
+            <div className="space-y-4">
+
+              {/* 1980 */}
+              <div className="relative">
+
+                <div className="absolute -left-[27px] top-5 h-[13px] w-[13px] rounded-full border-[3px] border-[#080D67] bg-[#F0C75E] ring-1 ring-[#F0C75E]/40" />
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-5 transition hover:border-[#D4A62A]/35">
+
+                  <div className="flex flex-wrap items-center gap-2">
+
+                    <span className="rounded-full bg-[#D4A62A]/15 px-3 py-1 text-[10px] font-black text-[#F0C75E]">
+                      ព.ស. ២៥២៤
+                    </span>
+
+                    <span className="text-xs font-bold text-white/45">
+                      គ.ស. ១៩៨០
+                    </span>
+
+                  </div>
+
+                  <h5 className="mt-3 font-khmer-serif font-bold text-white">
+                    ការរៀបចំកសាងទីអារាម
+                  </h5>
+
+                  <p className="mt-2 text-xs leading-6 text-white/55 sm:text-sm sm:leading-7">
+                    លោកតាពៅ និងលោកតាម៉ិច
+                    បានពិភាក្សាអំពីការកសាងវត្ត
+                    និងរៀបចំសុំធ្វើសាលាឧបោសថ។
+                  </p>
+
+                </div>
+              </div>
+
+              {/* 1993 */}
+              <div className="relative">
+
+                <div className="absolute -left-[27px] top-5 h-[13px] w-[13px] rounded-full border-[3px] border-[#080D67] bg-[#F0C75E] ring-1 ring-[#F0C75E]/40" />
+
+                <div className="rounded-2xl border border-[#D4A62A]/30 bg-gradient-to-r from-[#D4A62A]/10 to-white/[0.04] p-5">
+
+                  <div className="flex flex-wrap items-center gap-2">
+
+                    <span className="rounded-full bg-[#D4A62A] px-3 py-1 text-[10px] font-black text-[#080D67]">
+                      ព.ស. ២៥៣៧
+                    </span>
+
+                    <span className="text-xs font-bold text-[#F0C75E]">
+                      ២៣ កក្កដា ១៩៩៣
+                    </span>
+
+                  </div>
+
+                  <h5 className="mt-3 font-khmer-serif font-bold text-white">
+                    កំណើតវត្តសាសនសាមគ្គីរង្សី
+                  </h5>
+
+                  <p className="mt-2 text-xs leading-6 text-white/60 sm:text-sm sm:leading-7">
+                    សាលាឧបោសថបានក្លាយជាព្រះវិហារ
+                    នៃវត្តសាសនសាមគ្គីរង្សី (អូរត្រាវ)
+                    ដែលជាព្រឹត្តិការណ៍សំខាន់មួយក្នុងប្រវត្តិទីអារាម។
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* =====================================================
+            END NOTE
+        ===================================================== */}
+        <div className="mt-7 flex items-start gap-3 rounded-2xl border border-[#D4A62A]/20 bg-[#D4A62A]/[0.08] p-4">
+
+          <Heart className="mt-0.5 h-5 w-5 shrink-0 text-[#F0C75E]" />
+
+          <p className="text-xs leading-6 text-[#F7EED8]/60 sm:text-sm sm:leading-7">
+            ប្រវត្តិទីអារាមជាផ្នែកមួយនៃការចងចាំរួមរបស់សហគមន៍
+            និងជាមរតកសម្រាប់កូនចៅជំនាន់ក្រោយ។
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* =====================================================
           BUDDHIST CONTRIBUTION
@@ -1024,45 +1457,425 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* =====================================================
-          TREASURE ORAL ACCOUNT
-      ===================================================== */}
 
-      <section className="py-20 lg:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-[2rem] border border-[#D4A62A]/50 bg-gradient-to-br from-[#FFFDF8] to-[#F7F1E2] p-7 sm:p-10 shadow-sm">
-            <div className="flex items-start gap-5">
-              <Quote className="w-10 h-10 text-[#D4A62A] shrink-0" />
-              <div>
-                <p className="text-xs font-black tracking-widest text-[#D4A62A]">ORAL / FAMILY ACCOUNT</p>
-                <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-[#11178F] font-khmer-serif">
-                  រឿងកំណប់ទ្រព្យតាមការរៀបរាប់ក្នុងឯកសារ
-                </h2>
-                <div className="mt-6 space-y-4 text-stone-700 leading-8">
-                  <p>
-                    ឯកសារមានកំណត់ត្រាមួយដែលបានបន្តតាមការរៀបរាប់របស់សាច់ញាតិថា
-                    ថ្ងៃមួយលោកតាទឹតចុះទៅរែកទឹកពីអណ្ដូងសម្រាប់ស្រោចដំណាំ
-                    ហើយបានប្រទះដុំមាសមួយដុំធំ។
-                  </p>
-                  <p>
-                    តាមការរៀបរាប់នោះ ព្រឹត្តិការណ៍នេះបានធ្វើឲ្យជីវភាពគ្រួសារ
-                    កាន់តែមានទ្រព្យ ហើយគ្រួសារបានលៃលកទ្រព្យមួយផ្នែក
-                    សម្រាប់ធ្វើបុណ្យ និងការកសាងព្រះពុទ្ធសាសនា។
-                  </p>
-                </div>
-                <div className="mt-6 rounded-2xl bg-[#11178F]/5 border border-[#11178F]/10 p-5 text-sm leading-7 text-stone-600">
-                  កំណត់សម្គាល់៖ ផ្នែកនេះត្រូវបានបង្ហាញជាការរៀបរាប់ក្នុងឯកសារ
-                  មិនមែនជាការអះអាងថាបានផ្ទៀងផ្ទាត់ដោយប្រភពឯករាជ្យទេ។
-                </div>
-              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* =====================================================
+    TREASURE STORY — ORAL / FAMILY ACCOUNT
+    STORY SEQUENCE: 01 → 02 → 03
+===================================================== */}
+
+<section className="relative overflow-hidden bg-white py-16 lg:py-20">
+  {/* Background decoration */}
+  <div className="pointer-events-none absolute left-0 top-20 h-72 w-72 rounded-full bg-[#D4A62A]/5 blur-3xl" />
+  <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#11178F]/5 blur-3xl" />
+
+  <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    {/* =====================================================
+        HEADER
+    ===================================================== */}
+    <div className="mx-auto max-w-4xl text-center">
+      <div className="inline-flex items-center gap-2 rounded-full border border-[#D4A62A]/30 bg-[#D4A62A]/10 px-4 py-2">
+        <Quote className="h-4 w-4 text-[#D4A62A]" />
+
+        <span className="text-[10px] font-black tracking-[0.18em] text-[#11178F]">
+          ORAL / FAMILY ACCOUNT
+        </span>
+      </div>
+
+      <h2 className="mt-5 font-khmer-serif text-2xl font-bold leading-[1.7] text-[#11178F] sm:text-3xl lg:text-4xl">
+        រឿងកំណប់ទ្រព្យ
+        <span className="block text-[#D4A62A]">
+          តាមការរៀបរាប់ក្នុងឯកសារ
+        </span>
+      </h2>
+
+      {/* Divider */}
+      <div className="mt-5 flex items-center justify-center gap-2">
+        <div className="h-px w-10 bg-[#D4A62A]/50" />
+        <div className="h-2 w-2 rotate-45 border border-[#D4A62A] bg-white" />
+        <div className="h-px w-10 bg-[#D4A62A]/50" />
+      </div>
+
+      <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-stone-500 sm:text-base">
+        រឿងរ៉ាវដែលបានបន្តតាមការចងចាំរបស់សាច់ញាតិ
+        និងត្រូវបានកត់ត្រាទុកជាផ្នែកមួយនៃប្រវត្តិគ្រួសារ
+      </p>
+    </div>
+
+    {/* =====================================================
+        STORY CARD
+    ===================================================== */}
+    <article
+      className="
+        relative mt-10 overflow-hidden
+        rounded-[2rem]
+        border border-[#D4A62A]/30
+        bg-[#FFFDF8]
+        shadow-[0_25px_70px_rgba(17,23,143,0.10)]
+      "
+    >
+
+      {/* =====================================================
+          IMAGE STORY
+          MAIN = 02 GOLD DISCOVERY
+          RIGHT = 01 + 03
+      ===================================================== */}
+      <div className="grid gap-2 p-2 sm:gap-3 sm:p-3 lg:grid-cols-[1.4fr_.6fr]">
+
+        {/* =================================================
+            02 — MAIN IMAGE
+            GOLD DISCOVERY
+        ================================================= */}
+        <div
+          className="
+            group relative
+            min-h-[420px]
+            overflow-hidden
+            rounded-[1.6rem]
+            bg-[#080D67]
+            sm:min-h-[520px]
+            lg:min-h-[610px]
+          "
+        >
+          <HistoryImage
+            src="/assets/history/archive/treasure-story.jpg"
+            alt="លោកតាទឹតប្រទះឃើញដុំមាសក្បែរអណ្ដូង"
+            className="
+              absolute inset-0
+              h-full w-full
+              object-cover
+              object-[center_45%]
+              transition-transform
+              duration-700
+              group-hover:scale-[1.025]
+            "
+          />
+
+          {/* Overlay */}
+          <div
+            className="
+              pointer-events-none
+              absolute inset-0
+              bg-gradient-to-t
+              from-[#050947]/95
+              via-[#050947]/10
+              to-transparent
+            "
+          />
+
+          {/* Gold top line */}
+          <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#D4A62A] via-[#F0C75E] to-transparent" />
+
+      
+
+          {/* Number */}
+          <div
+            className="
+              absolute right-5 top-5
+              flex h-11 w-11
+              items-center justify-center
+              rounded-full
+              border border-white/20
+              bg-[#050947]/70
+              font-khmer-serif
+              text-sm font-black
+              text-[#F0C75E]
+              backdrop-blur-md
+              sm:right-6 sm:top-6
+            "
+          >
+            ០២
+          </div>
+
+          {/* Caption */}
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-9">
+            <div className="mb-4 h-[2px] w-10 bg-[#F0C75E]" />
+
+            <p className="text-[9px] font-black tracking-[0.16em] text-[#F0C75E]">
+              ចំណុចសំខាន់នៃការរៀបរាប់
+            </p>
+
+            <h3 className="mt-2 max-w-xl font-khmer-serif text-xl font-bold leading-9 text-white sm:text-2xl lg:text-3xl">
+              ការប្រទះឃើញ
+              <span className="block text-[#F0C75E]">
+                ដុំមាសក្បែរអណ្ដូង
+              </span>
+            </h3>
+
+            <p className="mt-3 max-w-lg text-xs leading-6 text-white/65 sm:text-sm">
+              តាមការរៀបរាប់ លោកតាទឹតបានប្រទះដុំមាស
+              នៅពេលចុះទៅរែកទឹកសម្រាប់ស្រោចដំណាំ។
+            </p>
+          </div>
+        </div>
+
+        {/* =================================================
+            RIGHT — 01 + 03
+        ================================================= */}
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-1">
+
+          {/* =================================================
+              01 — BEFORE DISCOVERY
+          ================================================= */}
+          <div
+            className="
+              group relative
+              min-h-[240px]
+              overflow-hidden
+              rounded-[1.5rem]
+              bg-[#F7F1E2]
+              sm:min-h-[290px]
+            "
+          >
+            <HistoryImage
+              src="/assets/history/archive/old-well.jpg"
+              alt="លោកតាទឹតរែកទឹកពីអណ្ដូងសម្រាប់ស្រោចដំណាំ"
+              className="
+                absolute inset-0
+                h-full w-full
+                object-cover
+                object-center
+                transition-transform
+                duration-700
+                group-hover:scale-[1.04]
+              "
+            />
+
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050947]/95 via-[#050947]/10 to-transparent" />
+
+            {/* Number */}
+            <div className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-[#050947]/70 font-khmer-serif text-xs font-black text-[#F0C75E] backdrop-blur-md">
+              ០១
+            </div>
+
+            {/* Caption */}
+            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+              <div className="mb-2 h-[2px] w-8 bg-[#F0C75E]" />
+
+              <p className="text-[9px] font-bold text-[#F0C75E]">
+                មុនពេលប្រទះឃើញ
+              </p>
+
+              <h4 className="mt-1 font-khmer-serif text-sm font-bold leading-7 text-white sm:text-base">
+                រែកទឹកពីអណ្ដូង
+                <span className="block text-[#F0C75E]">
+                  សម្រាប់ស្រោចដំណាំ
+                </span>
+              </h4>
+            </div>
+          </div>
+
+          {/* =================================================
+              03 — AFTER DISCOVERY
+          ================================================= */}
+          <div
+            className="
+              group relative
+              min-h-[240px]
+              overflow-hidden
+              rounded-[1.5rem]
+              bg-[#F7F1E2]
+              sm:min-h-[290px]
+            "
+          >
+            <HistoryImage
+              src="/assets/history/archive/family-merit.jpg"
+              alt="ការលៃលកទ្រព្យសម្រាប់ធ្វើបុណ្យ និងព្រះពុទ្ធសាសនា"
+              className="
+                absolute inset-0
+                h-full w-full
+                object-cover
+                object-center
+                transition-transform
+                duration-700
+                group-hover:scale-[1.04]
+              "
+            />
+
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050947]/95 via-[#050947]/10 to-transparent" />
+
+            {/* Number */}
+            <div className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-[#050947]/70 font-khmer-serif text-xs font-black text-[#F0C75E] backdrop-blur-md">
+              ០៣
+            </div>
+
+            {/* Caption */}
+            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+              <div className="mb-2 h-[2px] w-8 bg-[#F0C75E]" />
+
+              <p className="text-[9px] font-bold text-[#F0C75E]">
+                ក្រោយព្រឹត្តិការណ៍
+              </p>
+
+              <h4 className="mt-1 font-khmer-serif text-sm font-bold leading-7 text-white sm:text-base">
+                លៃលកទ្រព្យ
+                <span className="block text-[#F0C75E]">
+                  សម្រាប់ធ្វើបុណ្យ
+                </span>
+              </h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* =====================================================
+          STORY FLOW — 01 → 02 → 03
+      ===================================================== */}
+      <div className="border-b border-[#D4A62A]/15 px-6 py-6 sm:px-10 lg:px-12">
+        <div className="grid gap-3 sm:grid-cols-3">
+
+          {/* STEP 01 */}
+          <div className="flex items-center gap-3 rounded-xl bg-[#11178F]/[0.04] px-4 py-3">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#11178F] font-khmer-serif text-xs font-bold text-[#F0C75E]">
+              ០១
+            </div>
+
+            <p className="font-khmer-serif text-xs font-bold leading-6 text-[#11178F]">
+              រែកទឹកសម្រាប់ស្រោចដំណាំ
+            </p>
+          </div>
+
+          {/* STEP 02 */}
+          <div className="flex items-center gap-3 rounded-xl border border-[#D4A62A]/25 bg-[#D4A62A]/10 px-4 py-3">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#D4A62A] font-khmer-serif text-xs font-bold text-white">
+              ០២
+            </div>
+
+            <p className="font-khmer-serif text-xs font-bold leading-6 text-[#11178F]">
+              ប្រទះឃើញដុំមាស
+            </p>
+          </div>
+
+          {/* STEP 03 */}
+          <div className="flex items-center gap-3 rounded-xl bg-[#11178F]/[0.04] px-4 py-3">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#11178F] font-khmer-serif text-xs font-bold text-[#F0C75E]">
+              ០៣
+            </div>
+
+            <p className="font-khmer-serif text-xs font-bold leading-6 text-[#11178F]">
+              លៃលកទ្រព្យសម្រាប់ធ្វើបុណ្យ
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* =====================================================
+          TEXT CONTENT
+      ===================================================== */}
+      <div className="px-7 py-9 sm:px-10 lg:px-12 lg:py-12">
+        <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
+
+          {/* LEFT */}
+          <div>
+            <Quote className="h-10 w-10 text-[#D4A62A]" />
+
+            <p className="mt-5 text-[10px] font-black tracking-[0.16em] text-[#D4A62A]">
+              ORAL / FAMILY ACCOUNT
+            </p>
+
+            <h3 className="mt-3 font-khmer-serif text-xl font-bold leading-9 text-[#11178F] sm:text-2xl">
+              កំណត់ត្រាពីការរៀបរាប់
+              <span className="block text-[#D4A62A]">
+                របស់សាច់ញាតិ
+              </span>
+            </h3>
+
+            <div className="mt-5 h-[2px] w-12 bg-[#D4A62A]" />
+          </div>
+
+          {/* RIGHT */}
+          <div className="space-y-5 text-sm leading-8 text-stone-700 sm:text-base">
+            <p>
+              ឯកសារមានកំណត់ត្រាមួយដែលបានបន្តតាមការរៀបរាប់របស់សាច់ញាតិថា
+              ថ្ងៃមួយលោកតាទឹតចុះទៅរែកទឹកពីអណ្ដូងសម្រាប់ស្រោចដំណាំ
+              ហើយបានប្រទះដុំមាសមួយដុំធំ។
+            </p>
+
+            <p>
+              តាមការរៀបរាប់នោះ ព្រឹត្តិការណ៍នេះបានធ្វើឲ្យជីវភាពគ្រួសារ
+              កាន់តែមានទ្រព្យ ហើយគ្រួសារបានលៃលកទ្រព្យមួយផ្នែក
+              សម្រាប់ធ្វើបុណ្យ និងការកសាងព្រះពុទ្ធសាសនា។
+            </p>
+          </div>
+        </div>
+
+        {/* =================================================
+            SOURCE NOTE
+        ================================================= */}
+        <div
+          className="
+            mt-9
+            rounded-2xl
+            border border-[#D4A62A]/30
+            bg-gradient-to-r
+            from-[#11178F]/[0.05]
+            via-white
+            to-[#D4A62A]/[0.08]
+            p-5
+            sm:p-6
+          "
+        >
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#11178F]">
+              <Quote className="h-4 w-4 text-[#F0C75E]" />
+            </div>
+
+            <div>
+              <p className="font-khmer-serif text-sm font-bold text-[#11178F]">
+                កំណត់សម្គាល់អំពីប្រភព
+              </p>
+
+              <p className="mt-2 text-sm leading-7 text-stone-600">
+                ផ្នែកនេះត្រូវបានបង្ហាញជាការរៀបរាប់ក្នុងឯកសារ
+                និងការចងចាំរបស់សាច់ញាតិ មិនមែនជាការអះអាងថា
+                ព្រឹត្តិការណ៍នេះត្រូវបានផ្ទៀងផ្ទាត់
+                ដោយប្រភពឯករាជ្យនោះទេ។
+              </p>
             </div>
           </div>
         </div>
-      </section>
 
-      // ============================================================
-// ប្រវត្តិភ្លុកដំរី
-// ============================================================
+      </div>
+    </article>
+  </div>
+</section>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <section className="py-20 lg:py-24 bg-[#F7F1E2]">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1142,57 +1955,172 @@ export function AboutPage() {
 </section>
 
       {/* =====================================================
-          TA KHLA
-      ===================================================== */}
+    TA KHLA — ORAL HISTORY
+===================================================== */}
 
-      <section className="relative py-20 lg:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title="ORAL HISTORY"
-            khmerTitle="ប្រវត្តិសង្ខេប «តាខ្លា»"
-            subtitle="រឿងដែលបានបន្តប្រាប់តាមមនុស្សចាស់ក្នុងភូមិ"
+<section className="relative overflow-hidden bg-white py-20 lg:py-24">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    {/* Header */}
+    <SectionTitle
+      title="ORAL HISTORY"
+      khmerTitle="ប្រវត្តិសង្ខេប «តាខ្លា»"
+      subtitle="រឿងដែលបានបន្តប្រាប់តាមមនុស្សចាស់ក្នុងភូមិ"
+    />
+
+    {/* Main Card */}
+    <article
+      className="
+        relative mt-12 overflow-hidden
+        rounded-[2rem]
+        bg-[#080D67]
+        shadow-2xl
+        border border-[#D4A62A]/20
+      "
+    >
+      {/* Background decoration */}
+      <Quote className="pointer-events-none absolute -left-10 -top-10 h-56 w-56 text-white/[0.03]" />
+
+      <div className="relative grid lg:grid-cols-[1.08fr_.92fr]">
+
+        {/* =====================================================
+            LEFT — HISTORY CONTENT
+        ===================================================== */}
+        <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+
+          {/* Badge */}
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#D4A62A]/30 bg-[#D4A62A]/10 px-4 py-2">
+            <BookOpen className="h-4 w-4 text-[#F0C75E]" />
+
+            <span className="text-[10px] font-black tracking-[0.16em] text-[#F0C75E]">
+              ORAL HISTORY
+            </span>
+          </div>
+
+          {/* Title */}
+          <h3 className="mt-6 font-khmer-serif text-2xl font-bold leading-[1.6] text-white sm:text-3xl">
+            រឿងរ៉ាវប្រវត្តិសាស្ត្រ
+            <span className="block text-[#F0C75E]">
+              «តាខ្លា»
+            </span>
+          </h3>
+
+          {/* Divider */}
+          <div className="mt-5 flex items-center gap-3">
+            <div className="h-[2px] w-10 bg-[#D4A62A]" />
+            <div className="h-1.5 w-1.5 rounded-full bg-[#D4A62A]" />
+          </div>
+
+          {/* Content */}
+          <div className="mt-6 space-y-5 text-sm leading-8 text-[#F7EED8]/80 sm:text-[15px]">
+
+            <p>
+              តាមការរៀបរាប់ក្នុងឯកសារ នៅសម័យបារាំងគ្រប់គ្រង
+              តំបន់ព្រៃ និងភូមិនានានៅពេលនោះ
+              មានសត្វសាហាវ រួមទាំងសត្វខ្លា។
+            </p>
+
+            <p>
+              បុរសម្នាក់ឈ្មោះ សុខ
+              បានឃើញខ្លាមួយក្បាលកំពុងដេក
+              ហើយបានទៅប្រាប់លោកតាទឹត។
+              លោកតាទឹត និងលោកតាម៉ក់
+              បានធ្វើដំណើរតាមផ្លូវទឹកទៅកាន់ទីនោះ។
+            </p>
+
+            <p>
+              តាមរឿងដែលចាស់ៗក្នុងភូមិបន្តប្រាប់តៗគ្នា
+              លោកតាទឹតបានវាយខ្លានោះបានជោគជ័យ។
+              ដំណឹងនេះបានឮដល់អាជ្ញាធរនាសម័យនោះ
+              ហើយឯកសារក៏បានកត់ត្រារឿងនេះទុកជាផ្នែកមួយ
+              នៃប្រវត្តិរបស់លោកតា។
+            </p>
+
+          </div>
+
+          {/* Note */}
+          <div className="mt-8 flex items-start gap-3 border-t border-white/10 pt-6">
+
+            <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#F0C75E]" />
+
+            <p className="text-xs leading-6 text-white/45">
+              កំណត់សម្គាល់៖ ផ្នែកនេះជាប្រវត្តិដែលបានបន្តប្រាប់
+              តាមមនុស្សចាស់ក្នុងភូមិ និងត្រូវបានកត់ត្រាក្នុងឯកសារ។
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* =====================================================
+            RIGHT — IMAGE
+        ===================================================== */}
+        <div className="relative min-h-[420px] lg:min-h-[620px]">
+
+          <HistoryImage
+  src="/assets/history/archive/ta-khla.png"
+  alt="ប្រវត្តិតាខ្លា"
+  className="
+    absolute
+    inset-0
+    h-full
+    w-full
+    object-cover
+    object-center
+  "
+/>
+
+          {/* Dark gradient from left */}
+          <div
+            className="
+              pointer-events-none
+              absolute inset-0
+              bg-gradient-to-t
+              from-[#050947]/90
+              via-transparent
+              to-transparent
+              lg:bg-gradient-to-r
+              lg:from-[#080D67]
+              lg:via-[#080D67]/15
+              lg:to-transparent
+            "
           />
 
-          <article className="relative mt-12 overflow-hidden bg-[#11178F] text-white p-7 sm:p-10 lg:p-12 rounded-[2rem] shadow-xl">
-            <Quote className="absolute -right-5 -top-5 w-40 h-40 text-white/5" />
+          {/* Gold top line */}
+          <div className="absolute left-0 right-0 top-0 h-[3px] bg-gradient-to-r from-[#D4A62A] via-[#F0C75E] to-transparent" />
 
-            <div className="relative">
-              <div className="w-14 h-14 rounded-2xl bg-[#D4A62A] flex items-center justify-center">
-                <BookOpen className="w-7 h-7 text-[#11178F]" />
-              </div>
+          {/* Image Badge */}
+          <div className="absolute right-5 top-5 sm:right-6 sm:top-6">
 
-              <div className="mt-7 space-y-5 text-[#F7EED8] leading-8">
-                <p>
-                  តាមការរៀបរាប់ក្នុងឯកសារ នៅសម័យបារាំងគ្រប់គ្រង
-                  តំបន់ព្រៃ និងភូមិនានានៅពេលនោះ
-                  មានសត្វសាហាវ រួមទាំងសត្វខ្លា។
-                </p>
 
-                <p>
-                  បុរសម្នាក់ឈ្មោះ សុខ
-                  បានឃើញខ្លាមួយក្បាលកំពុងដេក
-                  ហើយបានទៅប្រាប់លោកតាទឹត។
-                  លោកតាទឹត និងលោកតាម៉ក់
-                  បានធ្វើដំណើរតាមផ្លូវទឹកទៅកាន់ទីនោះ។
-                </p>
 
-                <p>
-                  តាមរឿងដែលចាស់ៗក្នុងភូមិបន្តប្រាប់តៗគ្នា
-                  លោកតាទឹតបានវាយខ្លានោះបានជោគជ័យ។
-                  ដំណឹងនេះបានឮដល់អាជ្ញាធរនាសម័យនោះ
-                  ហើយឯកសារក៏បានកត់ត្រារឿងនេះទុកជាផ្នែកមួយ
-                  នៃប្រវត្តិរបស់លោកតា។
-                </p>
-              </div>
+          </div>
 
-              <div className="mt-8 pt-6 border-t border-white/15 text-sm text-white/60">
-                កំណត់សម្គាល់៖ ផ្នែកនេះជាប្រវត្តិដែលបានបន្តប្រាប់
-                តាមមនុស្សចាស់ក្នុងភូមិ និងត្រូវបានកត់ត្រាក្នុងឯកសារ។
-              </div>
-            </div>
-          </article>
+          {/* Caption */}
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+
+            <div className="mb-3 h-[2px] w-10 bg-[#F0C75E]" />
+
+            <p className="text-[10px] font-black tracking-[0.15em] text-[#F0C75E]">
+              ORAL HISTORY
+            </p>
+
+            <h4 className="mt-2 font-khmer-serif text-xl font-bold leading-8 text-white">
+              ប្រវត្តិសង្ខេប
+              <span className="block text-[#F0C75E]">
+                «តាខ្លា»
+              </span>
+            </h4>
+
+          </div>
+
         </div>
-      </section>
+
+      </div>
+    </article>
+
+  </div>
+</section>
 
       {/* =====================================================
           GENEALOGY
@@ -1247,7 +2175,7 @@ export function AboutPage() {
 
               <div className="relative p-4 bg-white rounded-[2rem] border border-[#D4A62A]/50 shadow-xl">
                 <HistoryImage
-                  src={historyImages.genealogy}
+                  src="public/assets/history/archive/s2_image16.png"
                   alt="ឯកសារពង្សាវតាររបស់គ្រួសារ"
                   className="w-full min-h-[450px] max-h-[680px] object-contain rounded-2xl bg-stone-50"
                 />
@@ -1401,94 +2329,8 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* =====================================================
-          SOURCE / COMPILER
-      ===================================================== */}
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
-        <div className="relative">
-          <div className="absolute -inset-3 rounded-[2.3rem] border border-[#D4A62A]/30" />
-
-          <div className="relative bg-white rounded-[2rem] border border-[#D4A62A]/50 shadow-xl overflow-hidden">
-            <div className="grid md:grid-cols-[320px_1fr]">
-              <div className="relative bg-[#F7F1E2]">
-                <HistoryImage
-                  src={historyImages.compiler}
-                  alt="ភិក្ខុរក្ខិតមនោ ថាច់ លឹមស៊ី ម៉័ន"
-                  className="w-full h-full min-h-[360px] object-contain"
-                />
-
-                <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 to-transparent">
-                  <p className="text-white text-sm font-bold font-khmer-serif">
-                    អ្នករៀបរៀងឯកសារប្រវត្តិ
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-8 sm:p-10 lg:p-12">
-                <div className="w-14 h-14 rounded-2xl bg-[#11178F] flex items-center justify-center">
-                  <Sparkles className="w-7 h-7 text-[#F0C75E]" />
-                </div>
-
-                <p className="mt-6 text-xs font-bold tracking-[0.2em] text-[#1B24C9]">
-                  HISTORICAL SOURCE
-                </p>
-
-                <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-[#11178F] font-khmer-serif">
-                  ប្រភពឯកសារ និងអ្នករៀបរៀង
-                </h2>
-
-                <p className="mt-6 text-stone-700 leading-8">
-                  ប្រវត្តិនេះត្រូវបានរក្សាទុក និងបន្តចម្លងពីឯកសារ
-                  របស់បុព្វបុរស និងព្រឹទ្ធាចារ្យ
-                  ដើម្បីរក្សាព័ត៌មានអំពីត្រកូល
-                  ភូមិអូរត្រាវ និងប្រវត្តិសាសនា
-                  សម្រាប់កូនចៅជំនាន់ក្រោយ។
-                </p>
-
-                <div className="mt-7 p-6 rounded-2xl bg-gradient-to-r from-[#11178F]/5 to-[#D4A62A]/10 border border-[#D4A62A]/30">
-                  <p className="text-xs font-bold text-[#D4A62A]">
-                    អ្នករៀបរៀងប្រវត្តិ និងបោះពុម្ព
-                  </p>
-
-                  <h3 className="mt-2 text-lg sm:text-xl font-bold text-[#11178F] font-khmer-serif">
-                    ចៅអធិការ ភិក្ខុរក្ខិតមនោ ថាច់ លឹមស៊ី «ម៉័ន»
-                  </h3>
-
-                  <p className="mt-2 text-sm font-bold text-[#1B24C9]">
-                    ព.ស. ២៥៦៦ • គ.ស. ២០២៣
-                  </p>
-                </div>
-
-                <div className="mt-7 grid sm:grid-cols-2 gap-3">
-                  {[
-                    ["១៩៦៦", "ព្រះព្រឹទ្ធាចារ្យ ថាច់ ហ័យ ស្រាវជ្រាវ និងកត់ត្រាពង្សាវតារ"],
-                    ["១៩៩៦", "ឧបាសក ថាច់ សុខ បានចម្លងឯកសារបន្ត"],
-                    ["២០០៨", "ភិក្ខុរក្ខិតមនោ ថាច់ លឹមស៊ី «ម៉័ន» បានចម្លងបន្ត"],
-                    ["២០០៩", "ឯកសារត្រូវបានរៀបចំជាអក្សរពុម្ពកុំព្យូទ័រ"],
-                    ["២០២៣", "រៀបរៀង និងបោះពុម្ពជំនាន់ដែលប្រើជាប្រភពនេះ"],
-                  ].map(([year, note]) => (
-                    <div key={year} className="rounded-2xl border border-[#E8D7A5] bg-[#FFFDF8] p-4">
-                      <div className="font-black text-[#D4A62A]">{year}</div>
-                      <p className="mt-2 text-xs leading-6 text-stone-600">{note}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-7 flex items-start gap-4">
-                  <Heart className="w-6 h-6 text-[#D4A62A] shrink-0 mt-1" />
-
-                  <p className="text-sm text-stone-600 leading-7">
-                    សូមរក្សាឯកសារ រូបភាព និងពង្សាវតារទាំងនេះ
-                    ជាមរតកសម្រាប់សហគមន៍
-                    និងកូនចៅជំនាន់ក្រោយ។
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
 
 

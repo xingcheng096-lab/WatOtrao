@@ -43,14 +43,75 @@ import {
   templeDevelopments
 } from "../../data/data";
 import { formatCurrency } from "../../utils/helpers";
+// ============================================================
+// MONK IMAGES
+// ============================================================
+
+import kruImage from "../../assets/images/kru.jpg";
+
+import monkImage1 from "../../assets/images/ថាច់ ធា.png";
+import monkImage2 from "../../assets/images/ថាច់ ង៉ុកហូវ.png";
+import monkImage3 from "../../assets/images/ថាច់ សាយ៉ាង.png";
+import monkImage4 from "../../assets/images/ចៅ រិទ្ធី.png";
+import monkImage5 from "../../assets/images/គឹម ហ្វាយញ៉ឹង.png";
+import khaiThachImage from "../../assets/images/ខាយ ថាច់.png";
 
 export function HomePage() {
   const { onOpenDonationModal } = useOutletContext() || {};
+// ============================================================
+  // LOCAL MONK IMAGE MAPPING
+  // ============================================================
 
+  const monkLocalImages = [
+    kruImage,
+    monkImage1,
+    monkImage2,
+    monkImage3,
+    monkImage4,
+    monkImage5,
+  ];
+
+  const getHomeMonkImage = (monk, index) => {
+    // Use local image first
+    if (monkLocalImages[index]) {
+      return monkLocalImages[index];
+    }
+
+    // Fallback
+    return monk?.portrait || monk?.image || kruImage;
+  };
   const recentActivities = templeActivities.slice(0, 6);
   const featuredPosts = INITIAL_POSTS.filter((p) => p.status === "Published").slice(0, 3);
   const upcomingEvents = INITIAL_EVENTS.filter((e) => e.status === "Upcoming").slice(0, 3);
-  const leadingMonks = INITIAL_MONKS.slice(0, 4);
+  const homeOnlyMonk = {
+  id: "home-khai-thach",
+  khmerName: "ខាយ ថាច់",
+  name: "Khai Thach",
+  title: "ព្រះសង្ឃ",
+  birthYear: "១៩៩១",
+  vassa: "២០",
+  portrait: khaiThachImage,
+};
+
+// Keep 4 monks only
+// Remove ព្រះមហា ចៅ រិទ្ធី → replace with ខាយ ថាច់
+// ============================================================
+// HOME MONKS — SHOW ALL 6
+// ============================================================
+
+const leadingMonks = [
+  ...INITIAL_MONKS.filter(
+    (monk) =>
+      !(
+        monk.khmerName?.includes("ចៅ រិទ្ធី") ||
+        monk.name?.toLowerCase().includes("chao ritthy") ||
+        monk.name?.toLowerCase().includes("chau ritthy")
+      )
+  ),
+  homeOnlyMonk,
+];
+
+
   const activeDevelopments = templeDevelopments.slice(0, 4);
   const recentDonors = donorRecords.slice(0, 6);
   const galleryPreview = INITIAL_GALLERIES.slice(0, 4);
@@ -535,17 +596,18 @@ export function HomePage() {
         4 MONK CARDS
     ========================= */}
     <div
-      className="
-        mt-10
-        grid
-        grid-cols-1
-        sm:grid-cols-2
-        lg:grid-cols-4
-        gap-5
-        xl:gap-6
-      "
-    >
-      {leadingMonks.map((monk) => (
+  className="
+    mt-10
+    grid
+    grid-cols-1
+    sm:grid-cols-2
+    lg:grid-cols-3
+    gap-6
+    max-w-6xl
+    mx-auto
+  "
+>
+      {leadingMonks.map((monk, index) => (
         <Card
   key={monk.id}
   className="
@@ -615,22 +677,28 @@ export function HomePage() {
             "
           >
             <img
-              src={monk.portrait || monk.image}
-              alt={monk.khmerName}
-              loading="lazy"
-              className="
-                w-full
-                h-full
-                object-cover
-                object-top
-
-                group-hover:scale-[1.04]
-
-                transition-transform
-                duration-500
-                ease-out
-              "
-            />
+  src={
+    monk.id === "home-khai-thach"
+      ? khaiThachImage
+      : getHomeMonkImage(monk, index)
+  }
+  alt={monk.khmerName || monk.name || "ព្រះសង្ឃ"}
+  loading="lazy"
+  onError={(e) => {
+    e.currentTarget.onerror = null;
+    e.currentTarget.src = kruImage;
+  }}
+  className="
+    w-full
+    h-full
+    object-cover
+    object-top
+    group-hover:scale-[1.04]
+    transition-transform
+    duration-500
+    ease-out
+  "
+/>
 
             {/* Bottom image gradient */}
             <div

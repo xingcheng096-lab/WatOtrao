@@ -236,14 +236,7 @@ export function Header({ onOpenSearch, onOpenDonationModal }) {
               <Search className="w-5 h-5" />
             </button>
 
-            {/* Donation CTA: Temple Gold (#D4A62A) */}
-            {/* <button
-              onClick={onOpenDonationModal}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-[#D4A62A] hover:bg-[#C99624] text-[#11178F] shadow-sm hover:shadow-md transition-all hover:scale-105 active:scale-95 border border-[#C99624]"
-            >
-              <Heart className="w-3.5 h-3.5 fill-[#11178F] text-[#11178F]" />
-              <span>ចូលរួមបរិច្ចាគ</span>
-            </button> */}
+            
 
             {/* Mobile Menu Trigger */}
             <button
@@ -306,27 +299,7 @@ export function Header({ onOpenSearch, onOpenDonationModal }) {
               );
             })}
 
-            <div className="my-4 pt-4 border-t border-[#D4A62A]/30 flex flex-col gap-3">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenDonationModal?.();
-                }}
-                className="w-full py-3 rounded-xl font-bold bg-[#D4A62A] hover:bg-[#C99624] text-[#11178F] text-center flex items-center justify-center gap-2 shadow-md"
-              >
-                <Heart className="w-4 h-4 fill-[#11178F]" />
-                <span>ចូលរួមបរិច្ចាគកសាងវត្ត (Donation)</span>
-              </button>
-
-              <Link
-                to="/admin"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 rounded-xl font-semibold bg-[#11178F] text-[#FFF9EA] border border-[#D4A62A]/40 text-center flex items-center justify-center gap-2"
-              >
-                <Shield className="w-4 h-4 text-[#D4A62A]" />
-                <span>ផ្ទាំងគ្រប់គ្រង (Admin Dashboard)</span>
-              </Link>
-            </div>
+            
           </div>
         </div>
       )}
