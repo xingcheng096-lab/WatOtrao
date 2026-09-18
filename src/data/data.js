@@ -1,4 +1,7 @@
 import watOuTraoLogo from "../assets/branding/wat-ou-trao-official-logo.png";
+import kru1Image from "../assets/images/kru1.png";
+import ginaImage from "../assets/images/ភិ.តេជវរោ ថាច់ជីណា.png";
+import datImage from "../assets/images/Dat.png";
 
 const templeLogo = watOuTraoLogo;
 
@@ -19,9 +22,9 @@ export const INITIAL_MONKS = [
     birthPlace: "ខេត្តព្រះត្រពាំង",
     bio: "ព្រះចៅអធិការវត្ត ដែលដឹកនាំការងារព្រះពុទ្ធសាសនា ការអប់រំ និងការអភិវឌ្ឍវត្ត។",
     image:
-      "src/assets/images/kru1.png",
+      kru1Image,
     portrait:
-      "src/assets/images/kru1.png",
+      kru1Image,
     yearsOrdained: 28,
     status: "Active",
     education: "ពុទ្ធិកសិក្សា...",
@@ -112,9 +115,9 @@ export const INITIAL_MONKS = [
   birthPlace: "",
   bio: "",
   image:
-    "src/assets/images/ភិ.តេជវរោ ថាច់ជីណា.png",
+    ginaImage,
   portrait:
-    "src/assets/images/ភិ.តេជវរោ ថាច់ជីណា.png",
+    ginaImage,
   yearsOrdained: 11,
   status: "Active",
 },
@@ -172,9 +175,9 @@ export const INITIAL_MONKS = [
   birthPlace: "",
   bio: "",
   image:
-    "src/assets/images/Dat.png",
+    datImage,
   portrait:
-    "src/assets/images/Dat.png",
+    datImage,
   yearsOrdained: 8,
   status: "Active",
 },

@@ -48,6 +48,10 @@ import { formatCurrency } from "../../utils/helpers";
 // ============================================================
 
 import kruImage from "../../assets/images/kru.jpg";
+import heroImage from "../../assets/images/wat-otrao.png";
+import welcomeImage from "../../assets/images/srong-preah.JPG";
+import heritageImage from "../../assets/wats/មរតកវប្បធម៌ និងវត្តអារាមខ្មែរ.png";
+import heritageImageAlt from "../../assets/wats/មរតកវប្បធម៌ និងវត្តអារាមខ្មែរ1.png";
 
 import monkImage1 from "../../assets/images/ថាច់ ធា.png";
 import monkImage2 from "../../assets/images/ថាច់ ង៉ុកហូវ.png";
@@ -126,7 +130,7 @@ const leadingMonks = [
         <div
           className="absolute inset-0 bg-cover bg-center animate-slow-zoom opacity-80 filter contrast-105"
           style={{
-      backgroundImage: `url('src/assets/images/wat-otrao.png')`,
+      backgroundImage: `url('${heroImage}')`,
     }}
         />
 
@@ -186,7 +190,7 @@ const leadingMonks = [
           <div className="lg:col-span-5 relative">
             <div className="relative p-2 sm:p-3 rounded-2xl bg-gradient-to-br from-[#D4A62A]/25 to-[#1B24C9]/15 shadow-xl border border-[#D4A62A]/40">
               <img
-                src="src/assets/images/srong-preah.JPG"
+                src={welcomeImage}
                 alt={`${siteSettings.templeNameKh} Pagoda`}
                 className="w-full h-96 object-cover rounded-xl shadow-inner filter brightness-[0.98]"
               />
@@ -935,7 +939,7 @@ const leadingMonks = [
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src="src/assets/wats/មរតកវប្បធម៌ និងវត្តអារាមខ្មែរ.png"
+                  src={heritageImage}
                   alt="Ancient Pagoda"
                   className="rounded-2xl border-2 border-[#D4A62A]/50 shadow-lg object-cover h-64 w-full"
                 />
@@ -952,7 +956,7 @@ const leadingMonks = [
                   <p className="text-[11px] text-[#FFF9EA]/80 mt-1">ថែរក្សាអក្សរ និងពុទ្ធសាសនា</p>
                 </div>
                 <img
-                  src="src/assets/wats/មរតកវប្បធម៌ និងវត្តអារាមខ្មែរ1.png"
+                  src={heritageImageAlt}
                   alt="Traditional Boat Race"
                   className="rounded-2xl border-2 border-[#D4A62A]/50 shadow-lg object-cover h-64 w-full"
                 />

@@ -5,6 +5,7 @@ import { Footer } from "../components/public/Footer";
 import { Modal, Button } from "../components/common/UIComponents";
 import { Search, Heart, QrCode, CheckCircle2, Copy } from "lucide-react";
 import { INITIAL_POSTS, INITIAL_EVENTS, INITIAL_MONKS, siteSettings } from "../data/data";
+import donationQrImage from "../assets/payment/photo_2026-09-14_20-18-22.jpg";
 
 export function PublicLayout() {
   const [searchModalOpen, setSearchModalOpen] = useState(false);
@@ -197,7 +198,7 @@ export function PublicLayout() {
   {/* ABA KHQR */}
   <div className="w-32 h-32 bg-white rounded-lg p-2 border border-[#D4AF37] flex items-center justify-center shrink-0 shadow-inner">
     <img
-      src="src/assets/payment/photo_2026-09-14_20-18-22.jpg"
+      src={donationQrImage}
       alt="ABA KHQR - WAT O TRAO"
       className="w-full h-full object-contain"
     />

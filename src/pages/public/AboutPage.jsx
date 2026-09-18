@@ -977,7 +977,7 @@ export function AboutPage() {
       <div className="relative overflow-hidden rounded-[1.35rem] bg-[#F7F1E2]">
 
         <HistoryImage
-          src="public/assets/history/archive/ធម្មមន្ទី.png"
+          src="/assets/history/archive/ធម្មមន្ទី.png"
           alt="វត្តសាសនសាមគ្គីរង្សី អូរត្រាវ"
           className="
             block
@@ -2175,7 +2175,7 @@ export function AboutPage() {
 
               <div className="relative p-4 bg-white rounded-[2rem] border border-[#D4A62A]/50 shadow-xl">
                 <HistoryImage
-                  src="public/assets/history/archive/s2_image16.png"
+                  src="/assets/history/archive/s2_image16.png"
                   alt="ឯកសារពង្សាវតាររបស់គ្រួសារ"
                   className="w-full min-h-[450px] max-h-[680px] object-contain rounded-2xl bg-stone-50"
                 />
