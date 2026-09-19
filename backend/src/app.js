@@ -1,0 +1,12 @@
+import express from "express";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
+import { env } from "./config/env.js";
+const app = express();
+app.use(helmet()); app.use(cors({ origin: [env.frontendOrigin, env.adminOrigin], credentials: true })); app.use(express.json({ limit: "1mb" })); app.use(cookieParser()); app.use(rateLimit({ windowMs: 15 * 60 * 1000, limit: 300 }));
+app.get("/health", (_req, res) => res.json({ ok: true, service: "wat-otrao-api" }));
+app.get("/api/v1", (_req, res) => res.json({ version: "v1", status: "foundation" }));
+app.use((err, _req, res, _next) => { console.error(err); res.status(500).json({ error: "Internal server error" }); });
+export default app;

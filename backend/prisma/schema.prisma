@@ -1,0 +1,155 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+  EDITOR
+  AUTHOR
+}
+enum PublishStatus {
+  DRAFT
+  REVIEW
+  SCHEDULED
+  PUBLISHED
+  ARCHIVED
+}
+model User {
+  id String @id @default(cuid())
+  email String @unique
+  passwordHash String
+  role Role @default(AUTHOR)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  sessions Session[]
+  posts Post[]
+}
+model Session {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  @@index([userId, expiresAt])
+}
+model Category {
+  id String @id @default(cuid())
+  name String @unique
+  slug String @unique
+  posts Post[]
+  createdAt DateTime @default(now())
+}
+model Post {
+  id String @id @default(cuid())
+  slug String @unique
+  title String
+  khmerTitle String?
+  excerpt String?
+  content String
+  status PublishStatus @default(DRAFT)
+  categoryId String?
+  category Category? @relation(fields: [categoryId], references: [id])
+  createdById String?
+  createdBy User? @relation(fields: [createdById], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  publishedAt DateTime?
+  @@index([status])
+}
+model Activity {
+  id String @id @default(cuid())
+  slug String @unique
+  title String
+  content String
+  status PublishStatus @default(DRAFT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Dharma {
+  id String @id @default(cuid())
+  slug String @unique
+  title String
+  content String
+  status PublishStatus @default(DRAFT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Event {
+  id String @id @default(cuid())
+  slug String @unique
+  title String
+  content String
+  status PublishStatus @default(DRAFT)
+  startsAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Monk {
+  id String @id @default(cuid())
+  name String
+  khmerName String?
+  bio String?
+  imageUrl String?
+  displayOrder Int @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Project {
+  id String @id @default(cuid())
+  name String
+  description String?
+  status PublishStatus @default(DRAFT)
+  displayOrder Int @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Gallery {
+  id String @id @default(cuid())
+  slug String @unique
+  title String
+  status PublishStatus @default(DRAFT)
+  images GalleryImage[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model GalleryImage {
+  id String @id @default(cuid())
+  galleryId String
+  gallery Gallery @relation(fields: [galleryId], references: [id], onDelete: Cascade)
+  mediaId String?
+  media Media? @relation(fields: [mediaId], references: [id])
+  displayOrder Int @default(0)
+}
+model Media {
+  id String @id @default(cuid())
+  filename String
+  originalName String
+  url String
+  mimeType String
+  size Int
+  width Int?
+  height Int?
+  altText String?
+  uploadedById String?
+  createdAt DateTime @default(now())
+  galleries GalleryImage[]
+}
+model SiteSetting {
+  id String @id @default(cuid())
+  key String @unique
+  value String
+  updatedAt DateTime @updatedAt
+}
+model AuditLog {
+  id String @id @default(cuid())
+  userId String?
+  action String
+  entity String
+  entityId String?
+  metadata Json?
+  createdAt DateTime @default(now())
+}
