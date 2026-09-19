@@ -1,23 +1,23 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { PublicLayout } from "./layouts/PublicLayout";
 import { AdminLayout } from "./layouts/AdminLayout";
 import { AdminDataProvider } from "./context/AdminDataContext";
 
 // Public Pages
-import { HomePage } from "./pages/public/HomePage";
-import { AboutPage } from "./pages/public/AboutPage";
-import { ActivitiesPage } from "./pages/public/ActivitiesPage";
-import { ActivityDetailPage } from "./pages/public/ActivityDetailPage";
-import { MonksPage } from "./pages/public/MonksPage";
-import { NewsPage } from "./pages/public/NewsPage";
-import { NewsDetailPage } from "./pages/public/NewsDetailPage";
-import { DharmaPage } from "./pages/public/DharmaPage";
-import { EventsPage } from "./pages/public/EventsPage";
-import { GalleryPage } from "./pages/public/GalleryPage";
-import { WatKhmerPage } from "./pages/public/WatKhmerPage";
-import { ContactPage } from "./pages/public/ContactPage";
-import { WatDetailPage } from "./pages/public/WatDetailPage";
+const HomePage = lazy(() => import("./pages/public/HomePage").then((m) => ({ default: m.HomePage })));
+const AboutPage = lazy(() => import("./pages/public/AboutPage").then((m) => ({ default: m.AboutPage })));
+const ActivitiesPage = lazy(() => import("./pages/public/ActivitiesPage").then((m) => ({ default: m.ActivitiesPage })));
+const ActivityDetailPage = lazy(() => import("./pages/public/ActivityDetailPage").then((m) => ({ default: m.ActivityDetailPage })));
+const MonksPage = lazy(() => import("./pages/public/MonksPage").then((m) => ({ default: m.MonksPage })));
+const NewsPage = lazy(() => import("./pages/public/NewsPage").then((m) => ({ default: m.NewsPage })));
+const NewsDetailPage = lazy(() => import("./pages/public/NewsDetailPage").then((m) => ({ default: m.NewsDetailPage })));
+const DharmaPage = lazy(() => import("./pages/public/DharmaPage").then((m) => ({ default: m.DharmaPage })));
+const EventsPage = lazy(() => import("./pages/public/EventsPage").then((m) => ({ default: m.EventsPage })));
+const GalleryPage = lazy(() => import("./pages/public/GalleryPage").then((m) => ({ default: m.GalleryPage })));
+const WatKhmerPage = lazy(() => import("./pages/public/WatKhmerPage").then((m) => ({ default: m.WatKhmerPage })));
+const ContactPage = lazy(() => import("./pages/public/ContactPage").then((m) => ({ default: m.ContactPage })));
+const WatDetailPage = lazy(() => import("./pages/public/WatDetailPage").then((m) => ({ default: m.WatDetailPage })));
 
 // Admin Pages
 import { AdminDashboard } from "./pages/admin/AdminDashboard";
@@ -34,6 +34,7 @@ import { AdminSettings } from "./pages/admin/AdminSettings";
 export default function App() {
   return (
     <AdminDataProvider>
+      <Suspense fallback={<div className="min-h-[40vh] flex items-center justify-center text-[#11178F]">Loading…</div>}>
       <Routes>
         {/* Public Website Routes */}
         <Route path="/" element={<PublicLayout />}>
@@ -71,6 +72,7 @@ export default function App() {
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      </Suspense>
     </AdminDataProvider>
   );
 }

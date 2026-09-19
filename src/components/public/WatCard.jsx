@@ -6,7 +6,13 @@ export function WatCard({ wat }) {
   return (
     <article className="overflow-hidden rounded-2xl border border-[#D4A62A]/60 bg-[#FFF9EA] shadow-md">
       {wat.image ? (
-        <img src={wat.image} alt={wat.nameKh} className="h-48 w-full object-cover" />
+        <img
+          src={wat.image}
+          alt={wat.nameKh}
+          loading="lazy"
+          decoding="async"
+          className="h-48 w-full object-cover"
+        />
       ) : (
         <div className="flex h-48 items-center justify-center bg-[#11178F] text-5xl text-[#D4A62A]">☸</div>
       )}
