@@ -95,28 +95,7 @@ export function Header({ onOpenSearch, onOpenDonationModal }) {
           </div>
 
           <div className="flex items-center gap-2.5 sm:gap-3">
-            {/* Official Facebook Link */}
-            {/* <a
-              href="https://www.facebook.com/Wattotrao"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[11px] px-2.5 py-0.5 rounded bg-white/15 hover:bg-[#1877F2] text-[#FFF9EA] border border-white/25 transition-colors"
-              title="ទំព័រហ្វេសប៊ុកផ្លូវការវត្ត អូរត្រាវ"
-            >
-              <Facebook className="w-3 h-3 text-[#93c5fd]" />
-              <span className="font-khmer-sans">Facebook: វត្ត អូរត្រាវ</span>
-            </a> */}
-
-            {/* Direct Admin Link for reviewer convenience */}
-            {/* <Link
-              to="/admin"
-              className="hidden sm:inline-flex items-center gap-1 text-[11px] px-2.5 py-0.5 rounded bg-[#1B24C9] text-white border border-[#D4A62A]/50 hover:bg-[#2934E5] transition-all"
-            >
-              <Shield className="w-3 h-3 text-[#D4A62A]" />
-              <span>ប្រព័ន្ធគ្រប់គ្រង (Admin CMS)</span>
-            </Link> */}
-
-            {/* Language Selector */}
+           
             <div className="relative">
               <button
                 onClick={() => setLangDropdown(!langDropdown)}
@@ -235,8 +214,6 @@ export function Header({ onOpenSearch, onOpenDonationModal }) {
             >
               <Search className="w-5 h-5" />
             </button>
-
-            
 
             {/* Mobile Menu Trigger */}
             <button

@@ -5,11 +5,9 @@ import datImage from "../assets/images/Dat.png";
 
 const templeLogo = watOuTraoLogo;
 
-
 // ============================================================
 // MONKS
 // ============================================================
-
 
 export const INITIAL_MONKS = [
   {
