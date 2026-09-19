@@ -219,10 +219,6 @@ export function Footer({ onOpenDonationModal }) {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F7EED8]/70 pt-2">
           <p>© {new Date().getFullYear()} {siteSettings.templeNameKh} ({siteSettings.templeMapName}). All Rights Reserved.</p>
           <div className="flex items-center gap-4">
-            <Link to="/admin/login" className="hover:text-[#D4A62A] transition-colors">
-              ចូលគ្រប់គ្រង (Admin Login)
-            </Link>
-            <span>•</span>
             <button
               onClick={scrollToTop}
               className="inline-flex items-center gap-1 hover:text-[#D4A62A] transition-colors"

@@ -14,10 +14,8 @@ import {
 } from "lucide-react";
 import { LotusDivider } from "../traditional/LotusDivider";
 import { siteSettings } from "../../data/data";
-import { useAdminData } from "../../context/AdminDataContext";
 export function Header({ onOpenSearch, onOpenDonationModal }) {
-  const adminData = useAdminData();
-  const currentSettings = adminData?.settings || siteSettings;
+  const currentSettings = siteSettings;
   const logoSrc = "/assets/logo/logo-wat-ortrao.png";
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
