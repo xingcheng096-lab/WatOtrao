@@ -1,4 +1,14 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
-const links = ["posts", "activities", "dharma", "events", "monks", "projects", "gallery", "media", "users", "settings", "audit-logs"];
-export function AdminLayout() { const { logout } = useAuth(); return <div style={{ display: "flex", minHeight: "100vh" }}><aside style={{ width: 240, background: "#11178f", color: "white", padding: 24 }}><h2>Wat Ô Trao</h2>{links.map((link) => <NavLink key={link} to={`/${link}`} style={{ display: "block", padding: "10px 0", opacity: .9 }}>{link}</NavLink>)}<button onClick={logout} style={{ marginTop: 20 }}>Log out</button></aside><main style={{ flex: 1, padding: 32 }}><Outlet /></main></div>; }
+
+const groups = [
+  { title: "ផ្ទាំងគ្រប់គ្រង", items: [{ to: "/", label: "ផ្ទាំងគ្រប់គ្រង", icon: "▦" }] },
+  { title: "មាតិកា", items: [["posts", "ព័ត៌មាន និងអត្ថបទ", "▤"], ["categories", "ប្រភេទអត្ថបទ", "▥"], ["activities", "សកម្មភាព", "◈"], ["dharma", "ព្រះធម៌", "☸"], ["events", "កម្មវិធី និងព្រឹត្តិការណ៍", "◇"], ["monks", "ព្រះសង្ឃ", "♙"], ["projects", "គម្រោងអភិវឌ្ឍន៍", "◫"]].map(([to, label, icon]) => ({ to: `/${to}`, label, icon })) },
+  { title: "មេឌៀ", items: [["gallery", "បណ្ណសាររូបភាព", "▧"], ["media", "បណ្ណាល័យមេឌៀ", "▨"]].map(([to, label, icon]) => ({ to: `/${to}`, label, icon })) },
+  { title: "ប្រព័ន្ធ", items: [["users", "អ្នកប្រើប្រាស់ និងតួនាទី", "♙"], ["audit-logs", "ប្រវត្តិសកម្មភាព", "◷"], ["settings", "ការកំណត់", "⚙"]].map(([to, label, icon]) => ({ to: `/${to}`, label, icon })) },
+];
+
+function Sidebar({ open, onClose }) { const { logout, user } = useAuth(); return <><div className={`sidebar-overlay ${open ? "show" : ""}`} onClick={onClose} /><aside className={`sidebar ${open ? "open" : ""}`}><div className="brand"><div className="brand-mark">វ</div><div><strong>វត្ត អូរត្រាវ</strong><small>ADMIN CMS</small></div><button className="mobile-close" onClick={onClose}>×</button></div><nav>{groups.map((group) => <div className="nav-group" key={group.title}><span className="nav-label">{group.title}</span>{group.items.map((item) => <NavLink end={item.to === "/"} onClick={onClose} className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`} to={item.to} key={item.to}><i>{item.icon}</i><span>{item.label}</span></NavLink>)}</div>)}</nav><div className="sidebar-footer"><div className="mini-profile"><div className="avatar">A</div><div><strong>{user?.name || "Admin"}</strong><small>អ្នកគ្រប់គ្រង</small></div></div><button className="logout-link" onClick={logout}>↪ ចាកចេញ</button></div></aside></>; }
+
+export function AdminLayout() { const [open, setOpen] = useState(false); const location = useLocation(); const title = location.pathname === "/" ? "ផ្ទាំងគ្រប់គ្រង" : groups.flatMap((g) => g.items).find((x) => location.pathname.startsWith(x.to))?.label || "ការគ្រប់គ្រង"; return <div className="admin-shell"><Sidebar open={open} onClose={() => setOpen(false)} /><div className="admin-main"><header className="topbar"><button className="menu-btn" onClick={() => setOpen(true)}>☰</button><div className="crumb"><strong>{title}</strong><span>វត្ត អូរត្រាវ / Admin CMS</span></div><div className="top-actions"><button className="top-icon">⌕</button><button className="top-icon notification">♢<em>2</em></button><div className="top-user"><div className="avatar">A</div><span>Admin</span><b>⌄</b></div></div></header><main className="content"><Outlet /></main></div></div>; }
