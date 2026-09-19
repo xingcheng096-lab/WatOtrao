@@ -1,0 +1,15 @@
+import crypto from "node:crypto";
+import { Router } from "express";
+import { z } from "zod";
+import { prisma } from "../../db/prisma.js";
+import { audit } from "../../utils/audit.js";
+import { hashPassword, verifyPassword } from "../../utils/password.js";
+import { authenticate, hashToken, sessionCookie } from "../../middleware/auth.js";
+const router = Router();
+const loginSchema = z.object({ email: z.string().email().transform((value) => value.trim().toLowerCase()), password: z.string().min(1) });
+const safeUser = (user) => ({ id: user.id, email: user.email, name: user.name, khmerName: user.khmerName, avatar: user.avatar, bio: user.bio, role: user.role, status: user.status });
+const cookieOptions = { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: process.env.NODE_ENV === "production" ? "lax" : "lax", maxAge: 1000 * 60 * 60 * 24 * 7, path: "/" };
+router.post("/login", async (req, res, next) => { try { const input = loginSchema.parse(req.body); const user = await prisma.user.findUnique({ where: { email: input.email } }); if (!user || user.status !== "ACTIVE" || !(await verifyPassword(input.password, user.passwordHash))) { await audit("LOGIN_FAILURE", { metadata: { email: input.email } }); return res.status(401).json({ error: "Invalid email or password" }); } const token = crypto.randomBytes(32).toString("base64url"); const session = await prisma.session.create({ data: { userId: user.id, tokenHash: hashToken(token), expiresAt: new Date(Date.now() + cookieOptions.maxAge), userAgent: req.get("user-agent") } }); await prisma.user.update({ where: { id: user.id }, data: { lastLoginAt: new Date() } }); await audit("LOGIN_SUCCESS", { userId: user.id, entityId: session.id }); res.cookie(sessionCookie, token, cookieOptions); res.json({ user: safeUser(user) }); } catch (error) { if (error.name === "ZodError") return res.status(400).json({ error: "Validation error", fields: error.flatten().fieldErrors }); next(error); } });
+router.post("/logout", authenticate, async (req, res, next) => { try { await prisma.session.update({ where: { id: req.auth.session.id }, data: { revokedAt: new Date() } }); await audit("LOGOUT", { userId: req.auth.user.id, entityId: req.auth.session.id }); res.clearCookie(sessionCookie, { httpOnly: true, secure: cookieOptions.secure, sameSite: cookieOptions.sameSite, path: "/" }); res.status(204).end(); } catch (error) { next(error); } });
+router.get("/me", authenticate, (req, res) => res.json({ user: safeUser(req.auth.user) }));
+export default router;

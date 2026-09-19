@@ -18,11 +18,22 @@ enum PublishStatus {
   PUBLISHED
   ARCHIVED
 }
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
 model User {
   id String @id @default(cuid())
   email String @unique
   passwordHash String
+  name String?
+  khmerName String?
+  avatar String?
+  bio String?
   role Role @default(AUTHOR)
+  status UserStatus @default(ACTIVE)
+  lastLoginAt DateTime?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   sessions Session[]
@@ -32,8 +43,12 @@ model Session {
   id String @id @default(cuid())
   userId String
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String @unique
   expiresAt DateTime
   createdAt DateTime @default(now())
+  lastUsedAt DateTime?
+  revokedAt DateTime?
+  userAgent String?
   @@index([userId, expiresAt])
 }
 model Category {
