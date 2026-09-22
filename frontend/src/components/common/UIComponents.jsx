@@ -125,9 +125,10 @@ export function RoleBadge({ role, className = "" }) {
   );
 }
 
-export function Card({ children, className = "", hover = true, onClick }) {
+export function Card({ children, className = "", hover = true, onClick, ...props }) {
   return (
     <div
+      {...props}
       onClick={onClick}
       className={`bg-white rounded-2xl border border-[#D4A62A]/25 overflow-hidden shadow-xs ${
         hover ? "hover-lift transition-all duration-300 hover:border-[#D4A62A] hover:shadow-md" : ""

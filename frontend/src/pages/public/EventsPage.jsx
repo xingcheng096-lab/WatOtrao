@@ -124,6 +124,7 @@ export function EventsPage() {
           {filteredUpcoming.map((evt) => (
             <div
               key={evt.id}
+              id={`event-${String(evt.id).replace(/^event-/, "")}`}
               className="bg-white rounded-2xl p-6 border border-[#E8D7A5] hover:border-[#D4A62A] shadow-xs hover-lift flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
             >
               <div className="flex items-start gap-5">
@@ -181,6 +182,7 @@ export function EventsPage() {
           {pastEvents.map((evt) => (
             <div
               key={evt.id}
+              id={`event-${String(evt.id).replace(/^event-/, "")}`}
               className="p-5 rounded-xl bg-stone-50 border border-stone-200 flex items-center justify-between"
             >
               <div>

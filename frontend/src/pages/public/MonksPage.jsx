@@ -243,6 +243,7 @@ export function MonksPage() {
 
       {headMonk && (
         <motion.section
+          id={`monk-${String(headMonk.id).replace(/^monk-/, "")}`}
           initial={{
             opacity: 0,
             y: 45,
@@ -838,6 +839,7 @@ export function MonksPage() {
             {otherMonks.map((monk) => (
               <Card
                 key={monk.id || monk.khmerName}
+                id={`monk-${String(monk.id).replace(/^monk-/, "")}`}
                 className="
                   group
                   h-full

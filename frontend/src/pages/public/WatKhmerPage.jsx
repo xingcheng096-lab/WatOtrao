@@ -354,7 +354,7 @@ const RAW_TEMPLES = [
    BUILD TEMPLE OBJECTS
 ========================================================= */
 
-const INITIAL_WATS = RAW_TEMPLES.map(
+export const INITIAL_WATS = RAW_TEMPLES.map(
   ([number, nameKh, buddhistYear, christianYear, districtKh, district]) => {
     const isOTrao = number === 35;
 
@@ -665,37 +665,41 @@ function OldestTemplesCarousel({ temples }) {
   const scrollRef = useRef(null);
   const animationRef = useRef(null);
 
-  const carouselItems = useMemo(() => [...temples, ...temples], [temples]);
+  const carouselItems = useMemo(
+    () => [...temples, ...temples],
+    [temples]
+  );
 
   useEffect(() => {
     const container = scrollRef.current;
 
-    if (!container || temples.length === 0) {
-      return undefined;
-    }
+    if (!container || temples.length === 0) return;
 
-    const setInitialPosition = () => {
-      const halfWidth = container.scrollWidth / 2;
-      if (halfWidth > 0 && container.scrollLeft <= 1) {
-        container.scrollLeft = halfWidth;
-      }
-    };
-
-    setInitialPosition();
+    // START FROM FIRST SET
+    container.scrollLeft = 0;
 
     let previousTime = performance.now();
+
+    // speed
     const SPEED = 30;
 
     const animate = (currentTime) => {
       const delta = currentTime - previousTime;
       previousTime = currentTime;
 
-      // Auto movement: left -> right.
-      container.scrollLeft -= (SPEED * delta) / 1000;
+      /*
+        RIGHT -> LEFT
+
+        Card enters from RIGHT
+        Card exits from LEFT
+      */
+      container.scrollLeft += (SPEED * delta) / 1000;
 
       const halfWidth = container.scrollWidth / 2;
-      if (halfWidth > 0 && container.scrollLeft <= 1) {
-        container.scrollLeft += halfWidth;
+
+      // seamless infinite loop
+      if (container.scrollLeft >= halfWidth) {
+        container.scrollLeft -= halfWidth;
       }
 
       animationRef.current = requestAnimationFrame(animate);
@@ -712,10 +716,15 @@ function OldestTemplesCarousel({ temples }) {
 
   const moveCarousel = (direction) => {
     const container = scrollRef.current;
+
     if (!container) return;
 
     const amount =
-      window.innerWidth < 640 ? 290 : window.innerWidth < 1024 ? 325 : 350;
+      window.innerWidth < 640
+        ? 290
+        : window.innerWidth < 1024
+          ? 325
+          : 350;
 
     container.scrollBy({
       left: direction === "next" ? amount : -amount,
@@ -727,6 +736,8 @@ function OldestTemplesCarousel({ temples }) {
 
   return (
     <div className="relative mt-12">
+
+      {/* LEFT BUTTON */}
       <button
         type="button"
         onClick={() => moveCarousel("prev")}
@@ -736,6 +747,7 @@ function OldestTemplesCarousel({ temples }) {
         <ChevronLeft className="h-5 w-5" />
       </button>
 
+      {/* RIGHT BUTTON */}
       <button
         type="button"
         onClick={() => moveCarousel("next")}
@@ -745,15 +757,21 @@ function OldestTemplesCarousel({ temples }) {
         <ChevronRight className="h-5 w-5" />
       </button>
 
+      {/* LEFT FADE */}
       <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-30 w-8 bg-gradient-to-r from-[#FFF9EC] via-[#FFF9EC]/70 to-transparent sm:w-16" />
+
+      {/* RIGHT FADE */}
       <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-30 w-8 bg-gradient-to-l from-[#FFF9EC] via-[#FFF9EC]/70 to-transparent sm:w-16" />
 
+      {/* CAROUSEL */}
       <div
         ref={scrollRef}
+        dir="ltr"
         className="flex gap-5 overflow-x-auto px-6 pb-8 pt-3 sm:gap-6 sm:px-12 lg:px-16 [&::-webkit-scrollbar]:hidden"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
+          direction: "ltr",
         }}
       >
         {carouselItems.map((wat, index) => (
@@ -765,6 +783,7 @@ function OldestTemplesCarousel({ temples }) {
         ))}
       </div>
 
+      {/* DOTS */}
       <div className="mt-1 flex items-center justify-center gap-4">
         <div className="flex items-center gap-2">
           {temples.map((wat, index) => (
@@ -779,6 +798,7 @@ function OldestTemplesCarousel({ temples }) {
           ))}
         </div>
       </div>
+
     </div>
   );
 }
